@@ -1,0 +1,186 @@
+<div class="card">
+  <div class="card-body">
+    <!-- Begin Student -->
+    <div class="card">
+      <div class="card-header">
+        Student
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Contact ID</label>
+            <div class="col-md-9">
+              <input type="text" readonly class="form-control" id="inputPassword" name="CONTACT_ID" [(ngModel)]="Contact.formData1.CONTACT_ID">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Studen ID</label>
+            <div class="col-md-9">
+              <input type="text" readonly class="form-control" id="" name="STU_ID" [(ngModel)]="Contact.formData1.STU_ID">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Student -->
+    <!-- Begin  -->
+    <div class="card">
+      <div class="card-header">
+        Father's Student
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Father's Name</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="inputPassword" name="FATHER_NAME" #FATHER_NAME="ngModel" [(ngModel)]="Contact.formData1.FATHER_NAME" >
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Father's Cellphone</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.FATHER_NAME.trim()" 
+              name="FATHER_PHONE" #FATHER_PHONE="ngModel"  [(ngModel)]="Contact.formData1.FATHER_PHONE"
+              pattern="(09|03|07|08|05)+([0-9]{8})"  required
+        [ngClass]="{ 'is-invalid':(FATHER_PHONE.errors && FATHER_PHONE.touched),'is-valid': !FATHER_PHONE.errors && FATHER_PHONE.touched}"
+              >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Father's Email Address</label>
+            <div class="col-md-9">
+              <input type="email" class="form-control"  pattern="^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" class="form-control" #FATHER_MAIL="ngModel"
+              #FATHER_MAIL="ngModel" id="inputPassword" [disabled]="!Contact.formData1.FATHER_NAME.trim()" 
+               name="FATHER_MAIL" [(ngModel)]="Contact.formData1.FATHER_MAIL"
+               [ngClass]="{ 'is-invalid':(FATHER_MAIL.errors && FATHER_MAIL.touched),'is-valid': !FATHER_MAIL.errors && FATHER_MAIL.touched}">
+              <span *ngIf="FATHER_MAIL.invalid && FATHER_MAIL.touched" class="text-danger">Email is invalid</span>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Father's Working Place</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.FATHER_NAME.trim()"  name="FATHER_WORKING" [(ngModel)]="Contact.formData1.FATHER_WORKING">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Father's Position
+            </label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.FATHER_NAME.trim()" name="FATHER_POSISION" [(ngModel)]="Contact.formData1.FATHER_POSISION">
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+    <!-- End Father -->
+    <!-- Begin Mother -->
+    <div class="card">
+        <div class="card-header">
+          Mother's Student
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Mother's Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" name="MOTHER_NAME" #MOTHER_NAME="ngModel" [(ngModel)]="Contact.formData1.MOTHER_NAME" >
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Mother's Cellphone</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.MOTHER_NAME.trim()" 
+                name="MOTHER_PHONE" #MOTHER_PHONE="ngModel"  [(ngModel)]="Contact.formData1.MOTHER_PHONE"
+                pattern="(09|03|07|08|05)+([0-9]{8})"  required
+          [ngClass]="{ 'is-invalid':(MOTHER_PHONE.errors && MOTHER_PHONE.touched),'is-valid': !MOTHER_PHONE.errors && MOTHER_PHONE.touched}"
+                >
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Mother's Email Address</label>
+              <div class="col-md-9">
+                <input type="email" class="form-control"  pattern="^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" class="form-control" #MOTHER_MAIL="ngModel"
+                #MOTHER_MAIL="ngModel" id="inputPassword" [disabled]="!Contact.formData1.MOTHER_NAME.trim()" 
+                 name="MOTHER_MAIL" [(ngModel)]="Contact.formData1.MOTHER_MAIL"
+                 [ngClass]="{ 'is-invalid':(MOTHER_MAIL.errors && MOTHER_MAIL.touched),'is-valid': !MOTHER_MAIL.errors && MOTHER_MAIL.touched}">
+                <span *ngIf="MOTHER_MAIL.invalid && MOTHER_MAIL.touched" class="text-danger">Email is invalid</span>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Mother's Working Place</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.MOTHER_NAME.trim()"  name="MOTHER_WORKING" [(ngModel)]="Contact.formData1.MOTHER_WORKING">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Mother's Position
+              </label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.MOTHER_NAME.trim()" name="MOTHER_POSISION" [(ngModel)]="Contact.formData1.MOTHER_POSISION">
+              </div>
+            </div>
+  
+  
+          </form>
+        </div>
+      </div>
+    <!-- End Mother -->
+    <!-- Begin Sponsor -->
+    <div class="card">
+        <div class="card-header">
+          Sponsor's Student
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Sponsor's Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" name="SPON_NAME" #SPON_NAME="ngModel" [(ngModel)]="Contact.formData1.SPON_NAME" >
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Sponsor's Cellphone</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.SPON_NAME.trim()" 
+                name="SPON_PHONE" #SPON_PHONE="ngModel"  [(ngModel)]="Contact.formData1.SPON_PHONE"
+                pattern="(09|03|07|08|05)+([0-9]{8})"  required
+          [ngClass]="{ 'is-invalid':(SPON_PHONE.errors && SPON_PHONE.touched),'is-valid': !SPON_PHONE.errors && SPON_PHONE.touched}"
+                >
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Sponsor's Email Address</label>
+              <div class="col-md-9">
+                <input type="email" class="form-control"  pattern="^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" class="form-control" #SPON_MAIL="ngModel"
+                #SPON_MAIL="ngModel" id="inputPassword" [disabled]="!Contact.formData1.SPON_NAME.trim()" 
+                 name="SPON_MAIL" [(ngModel)]="Contact.formData1.SPON_MAIL"
+                 [ngClass]="{ 'is-invalid':(SPON_MAIL.errors && SPON_MAIL.touched),'is-valid': !SPON_MAIL.errors && SPON_MAIL.touched}">
+                <span *ngIf="SPON_MAIL.invalid && SPON_MAIL.touched" class="text-danger">Email is invalid</span>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Sponsor's Working Place</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.SPON_NAME.trim()"  name="SPON_WORKING" [(ngModel)]="Contact.formData1.SPON_WORKING">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Sponsor's Position
+              </label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="inputPassword" [disabled]="!Contact.formData1.SPON_NAME.trim()" name="SPON_POSISION" [(ngModel)]="Contact.formData1.SPON_POSISION">
+              </div>
+            </div>
+  
+  
+          </form>
+        </div>
+      </div>
+    <!-- End Sponsor -->
+    <button (click)="updateRecord(Contact.formData1)" data-dismiss="modal" class="btn btn-success" >Submit</button>
+  </div>

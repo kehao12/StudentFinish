@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTTSVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BRANCH">
+    <Key>
+      <PropertyRef Name="BRANCH_ID" />
+    </Key>
+    <Property Name="BRANCH_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BRANCH_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="PROGRAMS" Relationship="Self.FK_PROGRAMS_HAS_CATEG_BRANCH" FromRole="BRANCH" ToRole="PROGRAMS" />
+  </EntityType>
+  <EntityType Name="CATALOG">
+    <Key>
+      <PropertyRef Name="CATA_ID" />
+    </Key>
+    <Property Name="CATA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YEAR_START_ID" Type="Int32" Nullable="false" />
+    <Property Name="YEAR_END_ID" Type="Int32" Nullable="false" />
+    <Property Name="NOTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="YEAR" Relationship="Self.FK_CATALOG_YEAR_END_YEAR" FromRole="CATALOG" ToRole="YEAR" />
+    <NavigationProperty Name="YEAR1" Relationship="Self.FK_CATALOG_YEAR_STAR_YEAR" FromRole="CATALOG" ToRole="YEAR" />
+    <NavigationProperty Name="INTAKEs" Relationship="Self.FK_INTAKE_IN_CATALOG" FromRole="CATALOG" ToRole="INTAKE" />
+    <NavigationProperty Name="LESSONs" Relationship="Self.FK_LESSON_CATALOG" FromRole="CATALOG" ToRole="LESSON" />
+    <NavigationProperty Name="STUDENTs" Relationship="Self.FK_STUDENT_OF4_CATALOG" FromRole="CATALOG" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="CATEGORY">
+    <Key>
+      <PropertyRef Name="CATE_ID" />
+    </Key>
+    <Property Name="CATE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INTYPE_ID" Type="Int32" Nullable="false" />
+    <Property Name="NAME_EN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NAME_VI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="SQUENCE_NUM" Type="Int32" />
+    <Property Name="NOTE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="INPUT_TYPE" Relationship="Self.FK_CATELOGY_HAS3_INPUT_TY" FromRole="CATEGORY" ToRole="INPUT_TYPE" />
+    <NavigationProperty Name="DOCUMENTs" Relationship="Self.FK_DOCUMENT_DOCUMENT2_CATELOGY" FromRole="CATEGORY" ToRole="DOCUMENT" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="CONTACT_ID" />
+    </Key>
+    <Property Name="CONTACT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STU_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CELL_PHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HOME_PHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PHONE_MESS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FATHER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FATHER_PHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FATHER_MAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FATHER_WORKING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FATHER_POSISION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER_PHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER_WORKING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER_POSISION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MOTHER_MAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SPON_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SPON_PHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SPON_MAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SPON_WORKING" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SPON_POSISION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="STUDENT" Relationship="Self.FK_CONTACT_HAS2_STUDENT" FromRole="CONTACT" ToRole="STUDENT" />
+    <NavigationProperty Name="STUDENTs" Relationship="Self.FK_STUDENT_HAS_CONTACT" FromRole="CONTACT" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="DOCUMENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STU_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CATE_ID" Type="Int32" />
+    <Property Name="CHECKBOX" Type="Boolean" />
+    <Property Name="NOTE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TEXT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CATEGORY" Relationship="Self.FK_DOCUMENT_DOCUMENT2_CATELOGY" FromRole="DOCUMENT" ToRole="CATEGORY" />
+    <NavigationProperty Name="STUDENT" Relationship="Self.FK_DOCUMENT_DOCUMENT_STUDENT" FromRole="DOCUMENT" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="INPUT_TYPE">
+    <Key>
+      <PropertyRef Name="INTYPE_ID" />
+    </Key>
+    <Property Name="INTYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TYPE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="CATEGORies" Relationship="Self.FK_CATELOGY_HAS3_INPUT_TY" FromRole="INPUT_TYPE" ToRole="CATEGORY" />
+  </EntityType>
+  <EntityType Name="INTAKE">
+    <Key>
+      <PropertyRef Name="INTAKE_ID" />
+    </Key>
+    <Property Name="INTAKE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CATA_ID" Type="Int32" Nullable="false" />
+    <Property Name="INTAKE_CODE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INTAKE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="CATALOG" Relationship="Self.FK_INTAKE_IN_CATALOG" FromRole="INTAKE" ToRole="CATALOG" />
+  </EntityType>
+  <EntityType Name="LESS_CONDITION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LESS_NOW" Type="Int32" Nullable="false" />
+    <Property Name="LESS_PRE" Type="Int32" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="LESSON" Relationship="Self.FK_LESS_CONDITION_LESSON" FromRole="LESS_CONDITION" ToRole="LESSON" />
+    <NavigationProperty Name="LESSON1" Relationship="Self.FK_LESS_CONDITION_LESSON1" FromRole="LESS_CONDITION" ToRole="LESSON" />
+  </EntityType>
+  <EntityType Name="LESSON">
+    <Key>
+      <PropertyRef Name="LESS_ID" />
+    </Key>
+    <Property Name="LESS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LESS_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LESS_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PRO_ID" Type="Int32" />
+    <Property Name="CATA_ID" Type="Int32" />
+    <Property Name="CREDIT" Type="Int32" />
+    <Property Name="PRICE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="NOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CATALOG" Relationship="Self.FK_LESSON_CATALOG" FromRole="LESSON" ToRole="CATALOG" />
+    <NavigationProperty Name="LESS_CONDITION" Relationship="Self.FK_LESS_CONDITION_LESSON" FromRole="LESSON" ToRole="LESS_CONDITION" />
+    <NavigationProperty Name="LESS_CONDITION1" Relationship="Self.FK_LESS_CONDITION_LESSON1" FromRole="LESSON" ToRole="LESS_CONDITION" />
+    <NavigationProperty Name="PROGRAM" Relationship="Self.FK_LESSON_PROGRAMS" FromRole="LESSON" ToRole="PROGRAMS" />
+  </EntityType>
+  <EntityType Name="PROGRAM">
+    <Key>
+      <PropertyRef Name="PRO_ID" />
+    </Key>
+    <Property Name="PRO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BRANCH_ID" Type="Int32" Nullable="false" />
+    <Property Name="PRO_CODE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PRO_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CREDITS_RE" Type="Int32" />
+    <Property Name="CREDITS_ELEC" Type="Int32" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="BRANCH" Relationship="Self.FK_PROGRAMS_HAS_CATEG_BRANCH" FromRole="PROGRAMS" ToRole="BRANCH" />
+    <NavigationProperty Name="LESSONs" Relationship="Self.FK_LESSON_PROGRAMS" FromRole="PROGRAMS" ToRole="LESSON" />
+    <NavigationProperty Name="STUDENTs" Relationship="Self.FK_STUDENT_STUDY_PROGRAMS" FromRole="PROGRAMS" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="SEMESTER">
+    <Key>
+      <PropertyRef Name="SEM_ID" />
+    </Key>
+    <Property Name="SEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SEM_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PRIORITY" Type="Int32" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="YEAR_SEME" Relationship="Self.FK_INCLUDE_INCLUDE2_SEMESTER" FromRole="SEMESTER" ToRole="YEAR_SEME" />
+  </EntityType>
+  <EntityType Name="STUDENT">
+    <Key>
+      <PropertyRef Name="STU_ID" />
+    </Key>
+    <Property Name="STU_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INTAKE_ID" Type="Int32" />
+    <Property Name="STUTYPE_ID" Type="Int32" Nullable="false" />
+    <Property Name="CONTACT_ID" Type="Int32" />
+    <Property Name="CATA_ID" Type="Int32" Nullable="false" />
+    <Property Name="PRO_ID" Type="Int32" />
+    <Property Name="HCCSP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HCCS_EMPID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CANDI_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FRIST_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BIRTH_DAY" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PLACE_BIRTH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HOME_COUNTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GENDER" Type="Int32" Nullable="false" />
+    <Property Name="PHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PERSON_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HOBBY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PER_ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PER_CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PER_COUNTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PORTAL_ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PORTAL_CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PROTAL_COUNTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IMG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="CATALOG" Relationship="Self.FK_STUDENT_OF4_CATALOG" FromRole="STUDENT" ToRole="CATALOG" />
+    <NavigationProperty Name="CONTACTs" Relationship="Self.FK_CONTACT_HAS2_STUDENT" FromRole="STUDENT" ToRole="CONTACT" />
+    <NavigationProperty Name="CONTACT" Relationship="Self.FK_STUDENT_HAS_CONTACT" FromRole="STUDENT" ToRole="CONTACT" />
+    <NavigationProperty Name="DOCUMENTs" Relationship="Self.FK_DOCUMENT_DOCUMENT_STUDENT" FromRole="STUDENT" ToRole="DOCUMENT" />
+    <NavigationProperty Name="PROGRAM" Relationship="Self.FK_STUDENT_STUDY_PROGRAMS" FromRole="STUDENT" ToRole="PROGRAMS" />
+    <NavigationProperty Name="TYPE_STUDENT" Relationship="Self.FK_STUDENT_OF3_TYPE_STU" FromRole="STUDENT" ToRole="TYPE_STUDENT" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TYPE_STUDENT">
+    <Key>
+      <PropertyRef Name="STUTYPE_ID" />
+    </Key>
+    <Property Name="STUTYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TYPE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="STUDENTs" Relationship="Self.FK_STUDENT_OF3_TYPE_STU" FromRole="TYPE_STUDENT" ToRole="STUDENT" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BIRTH_DAY" Type="DateTime" Precision="0" />
+    <Property Name="GENDER" Type="Int32" />
+    <Property Name="PHONE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="YEAR">
+    <Key>
+      <PropertyRef Name="YEAR_ID" />
+    </Key>
+    <Property Name="YEAR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YEAR1" Type="Int32" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="CATALOGs" Relationship="Self.FK_CATALOG_YEAR_END_YEAR" FromRole="YEAR" ToRole="CATALOG" />
+    <NavigationProperty Name="CATALOGs1" Relationship="Self.FK_CATALOG_YEAR_STAR_YEAR" FromRole="YEAR" ToRole="CATALOG" />
+    <NavigationProperty Name="YEAR_SEME" Relationship="Self.FK_INCLUDE_INCLUDE_YEAR" FromRole="YEAR" ToRole="YEAR_SEME" />
+  </EntityType>
+  <EntityType Name="YEAR_SEME">
+    <Key>
+      <PropertyRef Name="YEAR_ID" />
+      <PropertyRef Name="SEM_ID" />
+    </Key>
+    <Property Name="YEAR_ID" Type="Int32" Nullable="false" />
+    <Property Name="SEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="STATUS" Type="Int32" />
+    <NavigationProperty Name="SEMESTER" Relationship="Self.FK_INCLUDE_INCLUDE2_SEMESTER" FromRole="YEAR_SEME" ToRole="SEMESTER" />
+    <NavigationProperty Name="YEAR" Relationship="Self.FK_INCLUDE_INCLUDE_YEAR" FromRole="YEAR_SEME" ToRole="YEAR" />
+  </EntityType>
+  <Association Name="FK_PROGRAMS_HAS_CATEG_BRANCH">
+    <End Role="BRANCH" Type="Self.BRANCH" Multiplicity="1" />
+    <End Role="PROGRAMS" Type="Self.PROGRAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BRANCH">
+        <PropertyRef Name="BRANCH_ID" />
+      </Principal>
+      <Dependent Role="PROGRAMS">
+        <PropertyRef Name="BRANCH_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATALOG_YEAR_END_YEAR">
+    <End Role="YEAR" Type="Self.YEAR" Multiplicity="1" />
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YEAR">
+        <PropertyRef Name="YEAR_ID" />
+      </Principal>
+      <Dependent Role="CATALOG">
+        <PropertyRef Name="YEAR_END_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATALOG_YEAR_STAR_YEAR">
+    <End Role="YEAR" Type="Self.YEAR" Multiplicity="1" />
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YEAR">
+        <PropertyRef Name="YEAR_ID" />
+      </Principal>
+      <Dependent Role="CATALOG">
+        <PropertyRef Name="YEAR_START_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INTAKE_IN_CATALOG">
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="1" />
+    <End Role="INTAKE" Type="Self.INTAKE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOG">
+        <PropertyRef Name="CATA_ID" />
+      </Principal>
+      <Dependent Role="INTAKE">
+        <PropertyRef Name="CATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESSON_CATALOG">
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="0..1" />
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOG">
+        <PropertyRef Name="CATA_ID" />
+      </Principal>
+      <Dependent Role="LESSON">
+        <PropertyRef Name="CATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_OF4_CATALOG">
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOG">
+        <PropertyRef Name="CATA_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="CATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATELOGY_HAS3_INPUT_TY">
+    <End Role="INPUT_TYPE" Type="Self.INPUT_TYPE" Multiplicity="1" />
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INPUT_TYPE">
+        <PropertyRef Name="INTYPE_ID" />
+      </Principal>
+      <Dependent Role="CATEGORY">
+        <PropertyRef Name="INTYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENT_DOCUMENT2_CATELOGY">
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
+    <End Role="DOCUMENT" Type="Self.DOCUMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORY">
+        <PropertyRef Name="CATE_ID" />
+      </Principal>
+      <Dependent Role="DOCUMENT">
+        <PropertyRef Name="CATE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACT_HAS2_STUDENT">
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="CONTACT" Type="Self.CONTACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="STU_ID" />
+      </Principal>
+      <Dependent Role="CONTACT">
+        <PropertyRef Name="STU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_HAS_CONTACT">
+    <End Role="CONTACT" Type="Self.CONTACT" Multiplicity="0..1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTACT">
+        <PropertyRef Name="CONTACT_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="CONTACT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENT_DOCUMENT_STUDENT">
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="DOCUMENT" Type="Self.DOCUMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="STU_ID" />
+      </Principal>
+      <Dependent Role="DOCUMENT">
+        <PropertyRef Name="STU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESS_CONDITION_LESSON">
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="0..1" />
+    <End Role="LESS_CONDITION" Type="Self.LESS_CONDITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LESSON">
+        <PropertyRef Name="LESS_ID" />
+      </Principal>
+      <Dependent Role="LESS_CONDITION">
+        <PropertyRef Name="LESS_PRE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESS_CONDITION_LESSON1">
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="1" />
+    <End Role="LESS_CONDITION" Type="Self.LESS_CONDITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LESSON">
+        <PropertyRef Name="LESS_ID" />
+      </Principal>
+      <Dependent Role="LESS_CONDITION">
+        <PropertyRef Name="LESS_NOW" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESSON_PROGRAMS">
+    <End Role="PROGRAMS" Type="Self.PROGRAM" Multiplicity="0..1" />
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROGRAMS">
+        <PropertyRef Name="PRO_ID" />
+      </Principal>
+      <Dependent Role="LESSON">
+        <PropertyRef Name="PRO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_STUDY_PROGRAMS">
+    <End Role="PROGRAMS" Type="Self.PROGRAM" Multiplicity="0..1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROGRAMS">
+        <PropertyRef Name="PRO_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="PRO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INCLUDE_INCLUDE2_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="1" />
+    <End Role="YEAR_SEME" Type="Self.YEAR_SEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="SEM_ID" />
+      </Principal>
+      <Dependent Role="YEAR_SEME">
+        <PropertyRef Name="SEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_OF3_TYPE_STU">
+    <End Role="TYPE_STUDENT" Type="Self.TYPE_STUDENT" Multiplicity="1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPE_STUDENT">
+        <PropertyRef Name="STUTYPE_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="STUTYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INCLUDE_INCLUDE_YEAR">
+    <End Role="YEAR" Type="Self.YEAR" Multiplicity="1" />
+    <End Role="YEAR_SEME" Type="Self.YEAR_SEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YEAR">
+        <PropertyRef Name="YEAR_ID" />
+      </Principal>
+      <Dependent Role="YEAR_SEME">
+        <PropertyRef Name="YEAR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbModels" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BRANCHes" EntityType="Self.BRANCH" />
+    <EntitySet Name="CATALOGs" EntityType="Self.CATALOG" />
+    <EntitySet Name="CATEGORies" EntityType="Self.CATEGORY" />
+    <EntitySet Name="CONTACTs" EntityType="Self.CONTACT" />
+    <EntitySet Name="DOCUMENTs" EntityType="Self.DOCUMENT" />
+    <EntitySet Name="INPUT_TYPE" EntityType="Self.INPUT_TYPE" />
+    <EntitySet Name="INTAKEs" EntityType="Self.INTAKE" />
+    <EntitySet Name="LESS_CONDITION" EntityType="Self.LESS_CONDITION" />
+    <EntitySet Name="LESSONs" EntityType="Self.LESSON" />
+    <EntitySet Name="PROGRAMS" EntityType="Self.PROGRAM" />
+    <EntitySet Name="SEMESTERs" EntityType="Self.SEMESTER" />
+    <EntitySet Name="STUDENTs" EntityType="Self.STUDENT" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TYPE_STUDENT" EntityType="Self.TYPE_STUDENT" />
+    <EntitySet Name="USERs" EntityType="Self.USER" />
+    <EntitySet Name="YEARs" EntityType="Self.YEAR" />
+    <EntitySet Name="YEAR_SEME" EntityType="Self.YEAR_SEME" />
+    <AssociationSet Name="FK_PROGRAMS_HAS_CATEG_BRANCH" Association="Self.FK_PROGRAMS_HAS_CATEG_BRANCH">
+      <End Role="BRANCH" EntitySet="BRANCHes" />
+      <End Role="PROGRAMS" EntitySet="PROGRAMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATALOG_YEAR_END_YEAR" Association="Self.FK_CATALOG_YEAR_END_YEAR">
+      <End Role="YEAR" EntitySet="YEARs" />
+      <End Role="CATALOG" EntitySet="CATALOGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATALOG_YEAR_STAR_YEAR" Association="Self.FK_CATALOG_YEAR_STAR_YEAR">
+      <End Role="YEAR" EntitySet="YEARs" />
+      <End Role="CATALOG" EntitySet="CATALOGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INTAKE_IN_CATALOG" Association="Self.FK_INTAKE_IN_CATALOG">
+      <End Role="CATALOG" EntitySet="CATALOGs" />
+      <End Role="INTAKE" EntitySet="INTAKEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESSON_CATALOG" Association="Self.FK_LESSON_CATALOG">
+      <End Role="CATALOG" EntitySet="CATALOGs" />
+      <End Role="LESSON" EntitySet="LESSONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_OF4_CATALOG" Association="Self.FK_STUDENT_OF4_CATALOG">
+      <End Role="CATALOG" EntitySet="CATALOGs" />
+      <End Role="STUDENT" EntitySet="STUDENTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATELOGY_HAS3_INPUT_TY" Association="Self.FK_CATELOGY_HAS3_INPUT_TY">
+      <End Role="INPUT_TYPE" EntitySet="INPUT_TYPE" />
+      <End Role="CATEGORY" EntitySet="CATEGORies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENT_DOCUMENT2_CATELOGY" Association="Self.FK_DOCUMENT_DOCUMENT2_CATELOGY">
+      <End Role="CATEGORY" EntitySet="CATEGORies" />
+      <End Role="DOCUMENT" EntitySet="DOCUMENTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACT_HAS2_STUDENT" Association="Self.FK_CONTACT_HAS2_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENTs" />
+      <End Role="CONTACT" EntitySet="CONTACTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_HAS_CONTACT" Association="Self.FK_STUDENT_HAS_CONTACT">
+      <End Role="CONTACT" EntitySet="CONTACTs" />
+      <End Role="STUDENT" EntitySet="STUDENTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENT_DOCUMENT_STUDENT" Association="Self.FK_DOCUMENT_DOCUMENT_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENTs" />
+      <End Role="DOCUMENT" EntitySet="DOCUMENTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESS_CONDITION_LESSON" Association="Self.FK_LESS_CONDITION_LESSON">
+      <End Role="LESSON" EntitySet="LESSONs" />
+      <End Role="LESS_CONDITION" EntitySet="LESS_CONDITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESS_CONDITION_LESSON1" Association="Self.FK_LESS_CONDITION_LESSON1">
+      <End Role="LESSON" EntitySet="LESSONs" />
+      <End Role="LESS_CONDITION" EntitySet="LESS_CONDITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESSON_PROGRAMS" Association="Self.FK_LESSON_PROGRAMS">
+      <End Role="PROGRAMS" EntitySet="PROGRAMS" />
+      <End Role="LESSON" EntitySet="LESSONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_STUDY_PROGRAMS" Association="Self.FK_STUDENT_STUDY_PROGRAMS">
+      <End Role="PROGRAMS" EntitySet="PROGRAMS" />
+      <End Role="STUDENT" EntitySet="STUDENTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INCLUDE_INCLUDE2_SEMESTER" Association="Self.FK_INCLUDE_INCLUDE2_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTERs" />
+      <End Role="YEAR_SEME" EntitySet="YEAR_SEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_OF3_TYPE_STU" Association="Self.FK_STUDENT_OF3_TYPE_STU">
+      <End Role="TYPE_STUDENT" EntitySet="TYPE_STUDENT" />
+      <End Role="STUDENT" EntitySet="STUDENTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INCLUDE_INCLUDE_YEAR" Association="Self.FK_INCLUDE_INCLUDE_YEAR">
+      <End Role="YEAR" EntitySet="YEARs" />
+      <End Role="YEAR_SEME" EntitySet="YEAR_SEME" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

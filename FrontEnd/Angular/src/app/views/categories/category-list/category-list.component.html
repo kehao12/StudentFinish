@@ -1,0 +1,52 @@
+<div class="table-responsive-md">
+  <table datatable [dtOptions]="dtOptions" class="table table-bordered table-hover">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">TYPE</th>
+      <th scope="col">ENGLISH NAME</th>
+      <th scope="col">VIETNAMESE NAME</th>
+      <th scope="col">SQUENCE NUMBER</th>
+      <th scope="col">NOTE</th>
+      <th scope="col">STATUS</th>
+      <th scope="col">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cate of service.list">
+    <td>{{cate.CATE_ID}}</td>
+    <td><span *ngIf="cate.INTYPE_ID==1; else elseType"> CHECKBOX </span>
+      <ng-template #elseType>INPUT TEXT</ng-template></td>
+    <td>{{cate.NAME_EN}}</td>
+    <td>{{cate.NAME_VI}}</td>
+    <td>{{cate.SQUENCE_NUM}}</td>
+    <td>
+      <button type="button" class="btn btn-outline-secondary" ngbPopover="{{cate.NOTE}}" triggers="mouseenter:mouseleave" popoverTitle="{{cate.NAME_EN}}">
+      <i class="fa fa-eye"></i>
+      </button>
+     </td>
+    <td>
+        <span *ngIf="cate.STATUS==1" style="color: green;"> Active EN </span>
+        <span *ngIf="cate.STATUS==2" style="color: green;"> Active VI </span>
+        <span *ngIf="cate.STATUS==0" style="color: red;"> Banned </span>
+    </td>
+    <td class="text-center" ><button (click)="service.showModal($event,cate)" class="btn btn-success" data-toggle="modal" data-target="#exampleModal0"><i class="fa fa-edit"></i></button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-info">
+          <h5 class="modal-title" id="exampleModalLabel">Update Category</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <app-category-changed></app-category-changed>
+        </div>
+      </div>
+    </div>
+  </div>

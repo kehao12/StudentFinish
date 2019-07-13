@@ -1,0 +1,30 @@
+<div class="table-responsive-md">
+  <table datatable [dtOptions]="dtOptions" class="table table-bordered table-hover">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      
+      <th scope="col">Year</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let year of service.list; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{year.YEAR1}}</td>
+   
+      <td><span *ngIf="year.STATUS==1; else SAI;" style="color: green;">Display</span>
+        <ng-template #SAI> <span style="color: red;">Banned</span></ng-template>
+      </td>
+      <td class="text-center">
+          <button (click)="service.showModal($event,year)" aria-hidden="true" class="btn btn-success"
+          data-toggle="modal" data-target="#exampleModal0">
+          <i class="fa fa-edit"></i>
+          </button>
+      </td>
+    </tr>
+ 
+  </tbody>
+</table>
+</div>

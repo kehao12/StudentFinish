@@ -1,0 +1,46 @@
+<form #form="ngForm" autocomplete="off" >
+  <input type="hidden" name="CATE_ID" #CATE_ID="ngModel" [(ngModel)]="service.formData.CATE_ID">
+  <div class="form-group">
+    <label>ENGLISH NAME</label>
+    <input name="NAME_EN" #NAME_EN="ngModel" [(ngModel)]="service.formData.NAME_EN"  required [ngClass]="{ 'is-invalid' :(NAME_EN.errors && NAME_EN.touched) || !service.checkName_EN(service.formData.CATE_ID,service.formData.NAME_EN),'is-valid': !NAME_EN.errors && NAME_EN.touched}" class="form-control">
+    <span *ngIf="!service.checkName_EN(service.formData.CATE_ID,service.formData.NAME_EN)" class="text-danger">English Name is exist</span>
+  </div>
+  <div class="form-group">
+    <label>VIETNAMESE NAME</label>
+    <input name="NAME_VI" #NAME_VI="ngModel" [(ngModel)]="service.formData.NAME_VI" class="form-control">
+  </div>
+  <div class="form-group">
+      <label>SQUENCE NUMBER</label>
+      <input name="SQUENCE_NUM" #SQUENCE_NUM="ngModel" pattern="[0-9]*"
+      [ngClass]="{ 'is-invalid' :SQUENCE_NUM.errors && SQUENCE_NUM.touched,'is-valid': !SQUENCE_NUM.errors && SQUENCE_NUM.touched}"
+      [(ngModel)]="service.formData.SQUENCE_NUM" class="form-control">
+    <span *ngIf="SQUENCE_NUM.invalid" class="text-danger">
+      SQUENCE NUMBER must be the numbers!
+    </span>
+  </div>
+  <div class="form-group">
+      <label>NOTE</label>
+      <textarea name="NOTE" #NOTE="ngModel" [(ngModel)]="service.formData.NOTE" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+      <label>TYPE</label>
+      <select name="INTYPE_ID" #INTYPE_ID="ngModel" [(ngModel)]="service.formData.INTYPE_ID" class="form-control">
+        <option value="1">CHECKBOX</option>
+        <option value="2">INPUT TEXT</option>
+      </select>
+  </div>
+  <div class="form-group">
+      <label>STATUS</label>
+      <select name="STATUS" #STATUS="ngModel" [(ngModel)]="service.formData.STATUS" class="form-control">
+          <option value="1">ACTIVE EN</option>
+          <option [disabled]="!service.formData.NAME_VI" value="2">ACTIVE VN</option>
+        <option value="0">BANNED</option>
+      </select>
+  </div>
+  <div class="form-group pull-left">
+      <button type="button" (click)="service.showModal($event,service.formDataI)" class="btn btn-danger btn-block">RESET</button>
+    </div>
+    <div class="form-group pull-right">
+      <button type="button" [disabled]="form.invalid || !service.checkName_EN(service.formData.CATE_ID,service.formData.NAME_EN)" (click)="onSubmit(form)"  data-dismiss="modal" class="btn btn-info btn-block">SUBMIT</button>
+    </div>
+</form>

@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="card-body">
+      <!-- Begin Student -->
+      <div class="card">
+        <div class="card-header">
+          Student
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-md-3 col-form-label text-dark font-weight-bold">Studen ID</label>
+              <div class="col-md-9">
+                <input type="text" readonly class="form-control" id="" name="STU_ID" [(ngModel)]="service.ID">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- End Student -->
+      <!-- Begin  -->
+      <div class="row text-danger font-weight-bolder">
+          <div class="col-sm-12 col-md-4">NAME</div>
+          <div class="col-sm-12 col-md-4">CHECK BOX/TEXT</div>
+          <div class="col-sm-12 col-md-4">NOTE</div>
+      </div>
+      <ng-container *ngFor="let doc of service.frm;index as i">
+          <ng-container *ngFor="let cate of Category.list" >
+                <span *ngIf="doc.CATE_ID==cate.CATE_ID && cate.STATUS>0" class="row border-bottom border-danger pt-1 pb-1">
+                      <span *ngIf="cate.STATUS==1" class="col-sm-12 col-md-4 ">
+                          {{cate.NAME_EN}}
+                      </span>
+                      <span *ngIf="cate.STATUS==2" class="col-sm-12 col-md-4 ">
+                          {{cate.NAME_VI}}
+                      </span>
+
+                      <span *ngIf="cate.INTYPE_ID==1" class="col-sm-12 col-md-4 ">
+                          <input type="checkbox"  [(ngModel)]="service.frm[i].CHECKBOX" [value]="service.frm[i].CHECKBOX" [checked]="service.frm[i].CHECKBOX">
+                      </span>
+                      <span *ngIf="cate.INTYPE_ID==2" class="col-sm-12 col-md-4 ">
+                          <input type="text" name="TEXT" #TEXT="ngModel" [(ngModel)]="service.frm[i].TEXT">
+                      </span>
+                      <span  class="col-sm-12 col-md-4 ">
+                          <input type="text"  name="NOTE" #NOTE="ngModel" [(ngModel)]="service.frm[i].NOTE">
+                      </span>
+                      <br>
+                </span>
+          </ng-container>
+      </ng-container>
+      <button (click)="updateRecord()" data-dismiss="modal" class="btn btn-success" >Submit</button>
+    </div>
+  

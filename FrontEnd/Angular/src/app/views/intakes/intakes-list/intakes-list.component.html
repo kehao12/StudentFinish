@@ -1,0 +1,64 @@
+<div class="table-responsive-md">
+  <table datatable [dtOptions]="dtOptions" class="table table-bordered table-hover">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      
+      <th scope="col">Intake Code</th>
+      <th scope="col">Intake Name</th>
+      <th scope="col-auto">Catalogy</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let intk of service.list; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{intk.INTAKE_CODE}}</td>
+      <td>{{intk.INTAKE_NAME}}</td>
+      <td>
+        <div *ngFor="let cata of Catalog.list">
+          <span *ngIf="intk.CATA_ID==cata.id">{{cata.startYear + ' - ' + cata.endYear}}</span>
+          </div>
+        </td>
+      <td><span *ngIf="intk.STATUS==1; else Nu;" style="color: green;">Display</span>
+        <ng-template #Nu> <span style="color: red;">Banned</span></ng-template>
+      </td>
+      <td class="text-center">
+        <button (click)="populateForm(intk)" aria-hidden="true" class="btn btn-success"
+        data-toggle="modal" data-target="#exampleModal0">
+        <i class="fa fa-edit"></i>
+        </button>
+        <span *ngIf="conditionDel(intk.INTAKE_ID); else DelInTk">
+        <button class="btn btn-danger" (click)="loadID(intk.INTAKE_ID,intk.INTAKE_NAME)" data-toggle="modal" data-target="#delete">
+          <i class="fa fa-remove"></i>
+      </button>
+      </span>
+      <ng-template #DelInTk>  <button class="btn btn-danger" disabled>
+        <i class="fa fa-remove"></i>
+    </button> </ng-template>
+      <div class="modal fade" id="delete" role="dialog"  aria-hidden="true" #create>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-info">
+              
+              <h4 class="modal-title text-white">Delete Inform</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+               Do You Delete <STRONG style="color: red;">{{this.name}}</STRONG> ?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary"  (click)="onDelete(this.id)"  data-dismiss="modal">Yes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      </td>
+    </tr>
+ 
+  </tbody>
+</table>
+</div>

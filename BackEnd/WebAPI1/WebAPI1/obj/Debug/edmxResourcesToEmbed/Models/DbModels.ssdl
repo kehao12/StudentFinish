@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTTSVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BRANCH">
+    <Key>
+      <PropertyRef Name="BRANCH_ID" />
+    </Key>
+    <Property Name="BRANCH_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BRANCH_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="CATALOG">
+    <Key>
+      <PropertyRef Name="CATA_ID" />
+    </Key>
+    <Property Name="CATA_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YEAR_START_ID" Type="int" Nullable="false" />
+    <Property Name="YEAR_END_ID" Type="int" Nullable="false" />
+    <Property Name="NOTE" Type="varchar" MaxLength="100" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="CATEGORY">
+    <Key>
+      <PropertyRef Name="CATE_ID" />
+    </Key>
+    <Property Name="CATE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INTYPE_ID" Type="int" Nullable="false" />
+    <Property Name="NAME_EN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NAME_VI" Type="nvarchar" MaxLength="100" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="SQUENCE_NUM" Type="int" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="CONTACT_ID" />
+    </Key>
+    <Property Name="CONTACT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STU_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CELL_PHONE" Type="nvarchar" MaxLength="10" />
+    <Property Name="HOME_PHONE" Type="nvarchar" MaxLength="10" />
+    <Property Name="PHONE_MESS" Type="nvarchar" MaxLength="10" />
+    <Property Name="FATHER_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="FATHER_PHONE" Type="nvarchar" MaxLength="10" />
+    <Property Name="FATHER_MAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="FATHER_WORKING" Type="nvarchar" MaxLength="100" />
+    <Property Name="FATHER_POSISION" Type="nvarchar" MaxLength="100" />
+    <Property Name="MOTHER_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="MOTHER_PHONE" Type="nvarchar" MaxLength="10" />
+    <Property Name="MOTHER_WORKING" Type="nvarchar" MaxLength="100" />
+    <Property Name="MOTHER_POSISION" Type="nvarchar" MaxLength="100" />
+    <Property Name="MOTHER_MAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="SPON_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="SPON_PHONE" Type="nvarchar" MaxLength="10" />
+    <Property Name="SPON_MAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="SPON_WORKING" Type="nvarchar" MaxLength="100" />
+    <Property Name="SPON_POSISION" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DOCUMENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STU_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CATE_ID" Type="int" />
+    <Property Name="CHECKBOX" Type="bit" />
+    <Property Name="NOTE" Type="nvarchar" MaxLength="100" />
+    <Property Name="TEXT" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="INPUT_TYPE">
+    <Key>
+      <PropertyRef Name="INTYPE_ID" />
+    </Key>
+    <Property Name="INTYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TYPE_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="INTAKE">
+    <Key>
+      <PropertyRef Name="INTAKE_ID" />
+    </Key>
+    <Property Name="INTAKE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CATA_ID" Type="int" Nullable="false" />
+    <Property Name="INTAKE_CODE" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="INTAKE_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="LESS_CONDITION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LESS_NOW" Type="int" Nullable="false" />
+    <Property Name="LESS_PRE" Type="int" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="LESSON">
+    <Key>
+      <PropertyRef Name="LESS_ID" />
+    </Key>
+    <Property Name="LESS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LESS_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LESS_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PRO_ID" Type="int" />
+    <Property Name="CATA_ID" Type="int" />
+    <Property Name="CREDIT" Type="int" />
+    <Property Name="PRICE" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="NOTE" Type="ntext" />
+  </EntityType>
+  <EntityType Name="PROGRAMS">
+    <Key>
+      <PropertyRef Name="PRO_ID" />
+    </Key>
+    <Property Name="PRO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BRANCH_ID" Type="int" Nullable="false" />
+    <Property Name="PRO_CODE" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PRO_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CREDITS_RE" Type="int" />
+    <Property Name="CREDITS_ELEC" Type="int" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="SEMESTER">
+    <Key>
+      <PropertyRef Name="SEM_ID" />
+    </Key>
+    <Property Name="SEM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SEM_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PRIORITY" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="STUDENT">
+    <Key>
+      <PropertyRef Name="STU_ID" />
+    </Key>
+    <Property Name="STU_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="INTAKE_ID" Type="int" />
+    <Property Name="STUTYPE_ID" Type="int" Nullable="false" />
+    <Property Name="CONTACT_ID" Type="int" />
+    <Property Name="CATA_ID" Type="int" Nullable="false" />
+    <Property Name="PRO_ID" Type="int" />
+    <Property Name="HCCSP_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HCCS_EMPID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BARCODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CANDI_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FRIST_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LAST_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="BIRTH_DAY" Type="date" Nullable="false" />
+    <Property Name="PLACE_BIRTH" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="HOME_COUNTRY" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GENDER" Type="int" Nullable="false" />
+    <Property Name="PHONE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PERSON_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="HOBBY" Type="nvarchar" MaxLength="100" />
+    <Property Name="PER_ADDRESS" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PER_CITY" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PER_COUNTRY" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PORTAL_ADDRESS" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PORTAL_CITY" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PROTAL_COUNTRY" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IMG" Type="varchar(max)" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TYPE_STUDENT">
+    <Key>
+      <PropertyRef Name="STUTYPE_ID" />
+    </Key>
+    <Property Name="STUTYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TYPE_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="USERNAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LAST_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BIRTH_DAY" Type="date" />
+    <Property Name="GENDER" Type="int" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="100" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="YEAR">
+    <Key>
+      <PropertyRef Name="YEAR_ID" />
+    </Key>
+    <Property Name="YEAR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YEAR" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="YEAR_SEME">
+    <Key>
+      <PropertyRef Name="YEAR_ID" />
+      <PropertyRef Name="SEM_ID" />
+    </Key>
+    <Property Name="YEAR_ID" Type="int" Nullable="false" />
+    <Property Name="SEM_ID" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <Association Name="FK_CATALOG_YEAR_END_YEAR">
+    <End Role="YEAR" Type="Self.YEAR" Multiplicity="1" />
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YEAR">
+        <PropertyRef Name="YEAR_ID" />
+      </Principal>
+      <Dependent Role="CATALOG">
+        <PropertyRef Name="YEAR_END_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATALOG_YEAR_STAR_YEAR">
+    <End Role="YEAR" Type="Self.YEAR" Multiplicity="1" />
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YEAR">
+        <PropertyRef Name="YEAR_ID" />
+      </Principal>
+      <Dependent Role="CATALOG">
+        <PropertyRef Name="YEAR_START_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATELOGY_HAS3_INPUT_TY">
+    <End Role="INPUT_TYPE" Type="Self.INPUT_TYPE" Multiplicity="1" />
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INPUT_TYPE">
+        <PropertyRef Name="INTYPE_ID" />
+      </Principal>
+      <Dependent Role="CATEGORY">
+        <PropertyRef Name="INTYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACT_HAS2_STUDENT">
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="CONTACT" Type="Self.CONTACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="STU_ID" />
+      </Principal>
+      <Dependent Role="CONTACT">
+        <PropertyRef Name="STU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENT_DOCUMENT_STUDENT">
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="DOCUMENT" Type="Self.DOCUMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="STU_ID" />
+      </Principal>
+      <Dependent Role="DOCUMENT">
+        <PropertyRef Name="STU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENT_DOCUMENT2_CATELOGY">
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
+    <End Role="DOCUMENT" Type="Self.DOCUMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORY">
+        <PropertyRef Name="CATE_ID" />
+      </Principal>
+      <Dependent Role="DOCUMENT">
+        <PropertyRef Name="CATE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INCLUDE_INCLUDE_YEAR">
+    <End Role="YEAR" Type="Self.YEAR" Multiplicity="1" />
+    <End Role="YEAR_SEME" Type="Self.YEAR_SEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YEAR">
+        <PropertyRef Name="YEAR_ID" />
+      </Principal>
+      <Dependent Role="YEAR_SEME">
+        <PropertyRef Name="YEAR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INCLUDE_INCLUDE2_SEMESTER">
+    <End Role="SEMESTER" Type="Self.SEMESTER" Multiplicity="1" />
+    <End Role="YEAR_SEME" Type="Self.YEAR_SEME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTER">
+        <PropertyRef Name="SEM_ID" />
+      </Principal>
+      <Dependent Role="YEAR_SEME">
+        <PropertyRef Name="SEM_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INTAKE_IN_CATALOG">
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="1" />
+    <End Role="INTAKE" Type="Self.INTAKE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOG">
+        <PropertyRef Name="CATA_ID" />
+      </Principal>
+      <Dependent Role="INTAKE">
+        <PropertyRef Name="CATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESS_CONDITION_LESSON">
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="0..1" />
+    <End Role="LESS_CONDITION" Type="Self.LESS_CONDITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LESSON">
+        <PropertyRef Name="LESS_ID" />
+      </Principal>
+      <Dependent Role="LESS_CONDITION">
+        <PropertyRef Name="LESS_PRE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESS_CONDITION_LESSON1">
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="1" />
+    <End Role="LESS_CONDITION" Type="Self.LESS_CONDITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LESSON">
+        <PropertyRef Name="LESS_ID" />
+      </Principal>
+      <Dependent Role="LESS_CONDITION">
+        <PropertyRef Name="LESS_NOW" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESSON_CATALOG">
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="0..1" />
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOG">
+        <PropertyRef Name="CATA_ID" />
+      </Principal>
+      <Dependent Role="LESSON">
+        <PropertyRef Name="CATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LESSON_PROGRAMS">
+    <End Role="PROGRAMS" Type="Self.PROGRAMS" Multiplicity="0..1" />
+    <End Role="LESSON" Type="Self.LESSON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROGRAMS">
+        <PropertyRef Name="PRO_ID" />
+      </Principal>
+      <Dependent Role="LESSON">
+        <PropertyRef Name="PRO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROGRAMS_HAS_CATEG_BRANCH">
+    <End Role="BRANCH" Type="Self.BRANCH" Multiplicity="1" />
+    <End Role="PROGRAMS" Type="Self.PROGRAMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BRANCH">
+        <PropertyRef Name="BRANCH_ID" />
+      </Principal>
+      <Dependent Role="PROGRAMS">
+        <PropertyRef Name="BRANCH_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_HAS_CONTACT">
+    <End Role="CONTACT" Type="Self.CONTACT" Multiplicity="0..1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTACT">
+        <PropertyRef Name="CONTACT_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="CONTACT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_OF3_TYPE_STU">
+    <End Role="TYPE_STUDENT" Type="Self.TYPE_STUDENT" Multiplicity="1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPE_STUDENT">
+        <PropertyRef Name="STUTYPE_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="STUTYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_OF4_CATALOG">
+    <End Role="CATALOG" Type="Self.CATALOG" Multiplicity="1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOG">
+        <PropertyRef Name="CATA_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="CATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_STUDY_PROGRAMS">
+    <End Role="PROGRAMS" Type="Self.PROGRAMS" Multiplicity="0..1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROGRAMS">
+        <PropertyRef Name="PRO_ID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="PRO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLTTSVModelStoreContainer">
+    <EntitySet Name="BRANCH" EntityType="Self.BRANCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATALOG" EntityType="Self.CATALOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTACT" EntityType="Self.CONTACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOCUMENT" EntityType="Self.DOCUMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INPUT_TYPE" EntityType="Self.INPUT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INTAKE" EntityType="Self.INTAKE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LESS_CONDITION" EntityType="Self.LESS_CONDITION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LESSON" EntityType="Self.LESSON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROGRAMS" EntityType="Self.PROGRAMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEMESTER" EntityType="Self.SEMESTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT" EntityType="Self.STUDENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TYPE_STUDENT" EntityType="Self.TYPE_STUDENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YEAR" EntityType="Self.YEAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YEAR_SEME" EntityType="Self.YEAR_SEME" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CATALOG_YEAR_END_YEAR" Association="Self.FK_CATALOG_YEAR_END_YEAR">
+      <End Role="YEAR" EntitySet="YEAR" />
+      <End Role="CATALOG" EntitySet="CATALOG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATALOG_YEAR_STAR_YEAR" Association="Self.FK_CATALOG_YEAR_STAR_YEAR">
+      <End Role="YEAR" EntitySet="YEAR" />
+      <End Role="CATALOG" EntitySet="CATALOG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATELOGY_HAS3_INPUT_TY" Association="Self.FK_CATELOGY_HAS3_INPUT_TY">
+      <End Role="INPUT_TYPE" EntitySet="INPUT_TYPE" />
+      <End Role="CATEGORY" EntitySet="CATEGORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACT_HAS2_STUDENT" Association="Self.FK_CONTACT_HAS2_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="CONTACT" EntitySet="CONTACT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENT_DOCUMENT_STUDENT" Association="Self.FK_DOCUMENT_DOCUMENT_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="DOCUMENT" EntitySet="DOCUMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENT_DOCUMENT2_CATELOGY" Association="Self.FK_DOCUMENT_DOCUMENT2_CATELOGY">
+      <End Role="CATEGORY" EntitySet="CATEGORY" />
+      <End Role="DOCUMENT" EntitySet="DOCUMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INCLUDE_INCLUDE_YEAR" Association="Self.FK_INCLUDE_INCLUDE_YEAR">
+      <End Role="YEAR" EntitySet="YEAR" />
+      <End Role="YEAR_SEME" EntitySet="YEAR_SEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INCLUDE_INCLUDE2_SEMESTER" Association="Self.FK_INCLUDE_INCLUDE2_SEMESTER">
+      <End Role="SEMESTER" EntitySet="SEMESTER" />
+      <End Role="YEAR_SEME" EntitySet="YEAR_SEME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INTAKE_IN_CATALOG" Association="Self.FK_INTAKE_IN_CATALOG">
+      <End Role="CATALOG" EntitySet="CATALOG" />
+      <End Role="INTAKE" EntitySet="INTAKE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESS_CONDITION_LESSON" Association="Self.FK_LESS_CONDITION_LESSON">
+      <End Role="LESSON" EntitySet="LESSON" />
+      <End Role="LESS_CONDITION" EntitySet="LESS_CONDITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESS_CONDITION_LESSON1" Association="Self.FK_LESS_CONDITION_LESSON1">
+      <End Role="LESSON" EntitySet="LESSON" />
+      <End Role="LESS_CONDITION" EntitySet="LESS_CONDITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESSON_CATALOG" Association="Self.FK_LESSON_CATALOG">
+      <End Role="CATALOG" EntitySet="CATALOG" />
+      <End Role="LESSON" EntitySet="LESSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LESSON_PROGRAMS" Association="Self.FK_LESSON_PROGRAMS">
+      <End Role="PROGRAMS" EntitySet="PROGRAMS" />
+      <End Role="LESSON" EntitySet="LESSON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROGRAMS_HAS_CATEG_BRANCH" Association="Self.FK_PROGRAMS_HAS_CATEG_BRANCH">
+      <End Role="BRANCH" EntitySet="BRANCH" />
+      <End Role="PROGRAMS" EntitySet="PROGRAMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_HAS_CONTACT" Association="Self.FK_STUDENT_HAS_CONTACT">
+      <End Role="CONTACT" EntitySet="CONTACT" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_OF3_TYPE_STU" Association="Self.FK_STUDENT_OF3_TYPE_STU">
+      <End Role="TYPE_STUDENT" EntitySet="TYPE_STUDENT" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_OF4_CATALOG" Association="Self.FK_STUDENT_OF4_CATALOG">
+      <End Role="CATALOG" EntitySet="CATALOG" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_STUDY_PROGRAMS" Association="Self.FK_STUDENT_STUDY_PROGRAMS">
+      <End Role="PROGRAMS" EntitySet="PROGRAMS" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

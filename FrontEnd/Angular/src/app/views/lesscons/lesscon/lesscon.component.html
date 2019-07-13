@@ -1,0 +1,50 @@
+<form #form="ngForm" autocomplete="off">
+
+    <div class="form-group">
+        <label>PROGRAM</label>
+        <select name="PRO_ID" #PRO_ID1="ngModel" [(ngModel)]="this.PRO_ID" class="form-control">
+          <ng-container *ngFor="let pro of Program.list" >
+              <option *ngIf="pro.STATUS === 1"  [ngValue]="pro.PRO_ID">
+                  {{pro.PRO_NAME}}
+              </option>
+            </ng-container>
+        </select>
+      </div>
+
+  <div class="row">
+  <div class="form-group col-sm-6">
+    <label>Lesson</label>
+    <select name="LESS_NOW" #LESS_NOW="ngModel" [(ngModel)]="service.formData.LESS_NOW" class="form-control">
+        <ng-container *ngFor="let less of Lesson.list;" >
+            <option *ngIf="less.STATUS === 1 && PRO_ID === less.PRO_ID" [ngValue]="less.LESS_ID">
+                {{less.LESS_NAME}}
+            </option>
+          </ng-container>
+    </select>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label>Prerequisite</label>
+    <select name="LESS_PRE" #LESS_PRE="ngModel" [(ngModel)]="service.formData.LESS_PRE" class="form-control">
+      <ng-container *ngFor="let less of Lesson.list;" >
+          <option *ngIf="less.STATUS === 1 && PRO_ID === less.PRO_ID && less.LESS_ID != service.formData.LESS_NOW" [ngValue]="less.LESS_ID">
+              {{less.LESS_NAME}}
+          </option>
+        </ng-container>
+  </select>
+</div>
+  </div>
+
+
+  <div class="form-group pull-left">
+    <button type="button" (click)="resetForm()" class="btn btn-danger btn-block">RESET</button>
+  </div>
+  <div class="form-group pull-right">
+    <button type="button" id="next" (click)="onSubmit(form)"
+     data-toggle="modal"
+      data-target="#create" [disabled]="form.invalid" class="btn btn-info btn-block">SUBMIT</button>
+  </div>
+</form>
+
+<!--  || !checkCode(-1,service.formData.LESS_CODE) 
+      || !checkName(-1,service.formData.LESS_NAME) -->

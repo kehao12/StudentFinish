@@ -1,0 +1,92 @@
+<section>
+  <div class="">
+    <div class="row">
+      <div class="col-md-12">
+        <div v class="card">
+          <div class="card-header">
+            <div class="row justify-content-between">
+              <div class="col-6">
+                <h3>Statistic</h3>
+              </div>
+
+            </div>
+          </div>
+          <div class="card-body">
+              <div class="row justify-content-between mb-3">
+                  <div class="col-auto text-danger font-weight-bolder" >
+                    Catalog - {{this.service.a[0][0]}}
+                  </div>
+                  <div class="col-auto text-info font-weight-bolder" >
+                      Intake - {{this.service.a[0][1]}}
+                    </div>
+                    <div class="col-auto text-success font-weight-bolder" >
+                        Program - {{this.service.a[0][2]}}
+                      </div>
+                </div>
+            <form action="" class="form-inline row">
+              <div class="form-group col-sm-12 col-md-4 row">
+                <label class="col-sm-4" for="exampleFormControlSelect1">Catalog</label>
+                <select class="form-control col-sm-8" name="CATA_ID" [(ngModel)]="this.CATA_ID" onchange="this.init()">
+                  <option [ngValue]=null>All</option>
+                  <option *ngFor="let cata of Catalog.list" [ngValue]="cata.id">
+                    {{cata.startYear + ' - ' + cata.endYear}}
+                  </option>
+
+                </select>
+              </div>
+              <div class="form-group col-sm-12 col-md-4 row">
+                <label class="col-sm-4" for="exampleFormControlSelect1">Intake</label>
+                <select class="form-control col-sm-8" id="exampleFormControlSelect1" name="INTAKE_ID" [(ngModel)]="this.INTAKE_ID" >
+                  <option [ngValue]=null>All</option>
+                  <ng-container *ngFor="let intk of Intake.list;">
+                    <option *ngIf="(intk.CATA_ID == this.CATA_ID) || !this.CATA_ID" [ngValue]="intk.INTAKE_ID">
+                      {{intk.INTAKE_NAME}}
+                    </option>
+                  </ng-container>
+                </select>
+              </div>
+              <div class="form-group col-sm-12 col-md-4 row">
+                <label class="col-sm-4" for="exampleFormControlSelect1">Program</label>
+                <select class="form-control col-sm-8" id="exampleFormControlSelect1" name="PRO_ID" [(ngModel)]="this.PRO_ID">
+                  <option [ngValue]=null>All</option>
+                  <option *ngFor="let pro of Program.list" [ngValue]="pro.PRO_ID">
+                    {{pro.PRO_NAME}}
+                  </option>
+                </select>
+              </div>
+            </form>
+
+            <div class="table-responsive-md mt-2">
+              <table datatable [dtOptions]="dtOptions" class="table table-striped table-bordered hover">
+              <thead class="bg-info">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">ID</th>
+                  <th scope="col">LAST NAME</th>
+                  <th scope="col">FRIST NAME</th>
+                  <th scope="col">PHONE</th>
+                  <th scope="col">STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <ng-container *ngFor="let stu of Student.list , let i = index">
+                <tr *ngIf="( stu.CATA_ID == this.CATA_ID || this.CATA_ID == null ) && ( stu.INTAKE_ID == this.INTAKE_ID || this.INTAKE_ID == null ) && ( stu.PRO_ID == this.PRO_ID || this.PRO_ID == null )">
+                 <div hidden>{{this.cong()}}</div>
+                  <td>{{this.count}}</td>
+                  <td>{{stu.STU_ID}}</td>
+                  <td>{{stu.LAST_NAME}}</td>
+                  <td>{{stu.FRIST_NAME}}</td>
+                  <td>{{stu.PHONE}}</td>
+                  <td>
+                    <span *ngIf="stu.STATUS==1" style="color: green;"> Display </span>
+                    <span *ngIf="stu.STATUS==0" style="color: red;"> Banned </span>
+                  </td>
+                 
+                </tr>
+                
+                </ng-container>
+                <div hidden>{{this.init()}}</div>
+              </tbody>
+            </table>
+            </div>
+      

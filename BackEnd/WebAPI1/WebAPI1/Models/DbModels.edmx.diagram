@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="228941ad065041649980e5051a793ec1" Name="Diagram1">
+        <EntityTypeShape EntityType="QLTTSVModel.BRANCH" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.CATALOG" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.CATEGORY" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.CONTACT" Width="1.5" PointX="7.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.DOCUMENT" Width="1.5" PointX="10.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.INPUT_TYPE" Width="1.5" PointX="6" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.INTAKE" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.LESS_CONDITION" Width="1.5" PointX="10.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.LESSON" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.PROGRAM" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.SEMESTER" Width="1.5" PointX="3.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.STUDENT" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.sysdiagram" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.TYPE_STUDENT" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.USER" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.YEAR" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTTSVModel.YEAR_SEME" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
+        <AssociationConnector Association="QLTTSVModel.FK_PROGRAMS_HAS_CATEG_BRANCH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_CATALOG_YEAR_END_YEAR" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_CATALOG_YEAR_STAR_YEAR" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_INTAKE_IN_CATALOG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_LESSON_CATALOG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_STUDENT_OF4_CATALOG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_CATELOGY_HAS3_INPUT_TY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_DOCUMENT_DOCUMENT2_CATELOGY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_CONTACT_HAS2_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_STUDENT_HAS_CONTACT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_DOCUMENT_DOCUMENT_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_LESS_CONDITION_LESSON" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_LESS_CONDITION_LESSON1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_LESSON_PROGRAMS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_STUDENT_STUDY_PROGRAMS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_INCLUDE_INCLUDE2_SEMESTER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_STUDENT_OF3_TYPE_STU" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTTSVModel.FK_INCLUDE_INCLUDE_YEAR" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

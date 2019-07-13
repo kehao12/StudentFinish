@@ -1,0 +1,60 @@
+<div class="table-responsive-md">
+  <table datatable [dtOptions]="dtOptions" class="table table-bordered table-hover">
+    <thead class="bg-info">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Semester Name</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sem of service.list;let i=index">
+        <th>{{i +1 }}</th>
+       
+        <td>
+          {{sem.SEM_NAME}}
+        </td>
+        <td>
+            {{sem.PRIORITY}}
+        </td>
+        <td><span *ngIf="sem.STATUS==1; else SAI;" style="color: green;">Display</span>
+          <ng-template #SAI> <span style="color: red;">Banned</span></ng-template>
+        </td>
+        <td class="text-center">
+            <!-- <i (click)="populateForm(sem)" class="fa fa-pencil-square-o" aria-hidden="true" style="color: green; font-size: 1.2em"
+              data-toggle="modal" data-target="#update"></i>&nbsp; -->
+              <button (click)="service.showModal($event,sem)" aria-hidden="true" class="btn btn-success"
+              data-toggle="modal" data-target="#update">
+              <i class="fa fa-edit"></i>
+              </button>
+              
+          </td>
+          <!-- <td class="text-center" ><button (click)="populateForm(sem)"  class="btn btn-success"  data-toggle="modal" data-target="#update"><i class="fa fa-edit"></i></button></td> -->
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+<!-- begin modal update -->
+<div class="modal fade" id="update" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        
+        <h4 class="modal-title text-white">Update Semester</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <app-semester-change></app-semester-change>
+      </div>
+  
+    </div>
+    
+  </div>
+</div>
+
+<!-- end modal update -->

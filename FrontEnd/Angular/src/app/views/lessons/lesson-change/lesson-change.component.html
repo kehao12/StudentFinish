@@ -1,0 +1,106 @@
+<form #form="ngForm" autocomplete="off">
+  <input type="hidden" name="LESS_ID" #LESS_ID="ngModel" [(ngModel)]="service.formData.LESS_ID">
+    <div class="row">
+    <div class="form-group col-sm-6">
+      <label>LESSION CODE</label>
+      <!-- [(ngModel)]="service.formData.PRO_CODE" -->
+      <input type="text" required name="LESS_CODE" #LESS_CODE="ngModel" [(ngModel)]="service.formData.LESS_CODE"
+        class="form-control"
+        [ngClass]="{ 'is-invalid':(LESS_CODE.errors && LESS_CODE.touched) || !checkCode(service.formData.LESS_ID,service.formData.LESS_CODE),'is-valid': !LESS_CODE.errors && LESS_CODE.touched}" >
+        
+      <span *ngIf="!checkCode(service.formData.LESS_ID,service.formData.LESS_CODE ) && LESS_CODE.touched" class="text-danger">
+        Lesson code is exist
+      </span>
+    </div>
+  
+    <div class="form-group col-sm-6">
+      <label>LESSION NAME</label>
+      <input type="text" required name="LESS_NAME" #LESS_NAME="ngModel" [(ngModel)]="service.formData.LESS_NAME"
+        class="form-control"  [ngClass]="{ 'is-invalid':(LESS_NAME.errors && LESS_NAME.touched) || !checkName(service.formData.LESS_ID,service.formData.LESS_NAME),'is-valid': !LESS_NAME.errors && LESS_NAME.touched}"
+        >
+       
+      <span *ngIf="!checkName(service.formData.LESS_ID,service.formData.LESS_NAME) && LESS_NAME.touched" class="text-danger">
+        Lesson Name is exist
+      </span>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="form-group col-sm-6">
+      <label>CREDIT</label>
+      <input name="CREDIT" #CREDIT="ngModel" required pattern="[0-9]*"   [(ngModel)]="service.formData.CREDIT" class="form-control"
+      [ngClass]="{ 'is-invalid' :CREDIT.errors && CREDIT.touched,'is-valid': !CREDIT.errors && CREDIT.touched}">
+      
+      
+      <span *ngIf="CREDIT.invalid && CREDIT.touched" class="text-danger">
+        Credits must be the numbers!
+      </span>
+  
+    </div>
+  
+    <div class="form-group col-sm-6">
+      <label>PRICE</label>
+      <input name="PRICE" #PRICE="ngModel"  required pattern="[0-9]*" [(ngModel)]="service.formData.PRICE" class="form-control"
+      [ngClass]="{ 'is-invalid' :PRICE.errors && PRICE.touched,'is-valid': !PRICE.errors && PRICE.touched}"
+      >
+  
+       
+      <span *ngIf="PRICE.invalid && PRICE.touched" class="text-danger">
+        Price must be the numbers!
+      </span>
+  
+    </div>
+  </div>
+    <div class="form-group">
+      <label>CATALOG</label>
+      <select name="CATA_ID" #CATA_ID="ngModel" [(ngModel)]="service.formData.CATA_ID" class="form-control">
+          <ng-container *ngFor="let cata of Catalog.list;" >
+              <option *ngIf="cata.status === 1" [ngValue]="cata.id">
+                  {{cata.startYear + ' - ' + cata.endYear}}
+              </option>
+            </ng-container>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label>PROGRAM</label>
+      <select name="PRO_ID" #PRO_ID="ngModel" [(ngModel)]="service.formData.PRO_ID" class="form-control">
+        <ng-container *ngFor="let pro of Program.list" >
+            <option *ngIf="pro.STATUS === 1"  [ngValue]="pro.PRO_ID">
+                {{pro.PRO_NAME}}
+            </option>
+          </ng-container>
+      </select>
+    </div>
+  
+    <!-- <div class="form-group">
+        <label>CONDITION</label>
+        <select name="CON" #CON="ngModel" [(ngModel)]="service.CON" class="form-control">
+          <option *ngFor="let less of service.list" [ngValue]="less.LESS_ID">
+            {{less.LESS_NAME}}
+          </option>
+        </select>
+      </div> -->
+  
+    <div class="form-group">
+      <label>NOTE</label>
+        <textarea required name="NOTE" #NOTE="ngModel" [(ngModel)]="service.formData.NOTE"
+        class="form-control"cols="10" rows="5"></textarea>
+    </div>
+  
+  
+    <input type="hidden" name="STATUS"  [(ngModel)]="service.formData.STATUS">
+    
+    <input type="hidden" name="LESS_ID"  [(ngModel)]="service.formData.LESS_ID">
+    <!-- <input type="hidden" name="STATUS"  [(ngModel)]="service.formData.STATUS"> -->
+    <div class="form-group pull-left">
+      <button type="button" (click)="loadForm(this.service.formDataI)" class="btn btn-danger btn-block">RESET</button>
+    </div>
+    <div class="form-group pull-right">
+      <button type="button" id="next" (click)="onSubmit(form)" data-dismiss="modal"
+   class="btn btn-info btn-block">NEXT</button>
+    </div>
+  </form>
+  
+  
+  

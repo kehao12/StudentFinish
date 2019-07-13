@@ -1,0 +1,50 @@
+<section>
+    <div class="">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="row justify-content-between">
+                <div class="col-6">
+                  <h3>List Semester</h3>
+                </div>
+                <div class="col-6 text-right">
+                  <button type="button"  (click)="service.showModal()"  class="btn btn-primary" data-toggle="modal" data-target="#create">
+                    <i class="fa fa-plus" aria-hidden="true"> </i>
+                    &nbsp; Add
+                  </button>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+           <app-semester-list></app-semester-list>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- begin modal create -->
+  <div class="modal fade" id="create" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            
+            <h4 class="modal-title text-white">Add New Semester</h4>
+            <button type="button"    class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+             <app-semester></app-semester>
+          </div>
+      
+        </div>
+        
+      </div>
+    </div>
+  
+  <!-- end modal create -->
+  

@@ -1,0 +1,46 @@
+<form #form="ngForm" autocomplete="off">
+            
+  <div class="form-group">
+   
+      <input type="hidden" name="INTAKE_ID" #INTAKE_ID="ngModel" [(ngModel)]="service.formData.INTAKE_ID">
+      <div class="form-group">
+          <label for="">Catalogy</label>
+          <select class="form-control" name="CATA_ID" #CATA_ID="ngModel" [(ngModel)]="service.formData.CATA_ID" >
+            <!-- <option *ngFor="let cata of Catalog.list" [ngValue]="cata.id">{{cata.startYear + ' - ' + cata.endYear}}</option> -->
+            
+            <ng-container *ngFor="let cata of Catalog.list;" >
+                <option *ngIf="cata.status === 1" [ngValue]="cata.id">
+                    {{cata.startYear + ' - ' + cata.endYear}}
+                </option>
+              </ng-container>
+          </select>
+        </div>
+  </div>
+  <div class="form-group">
+      <label for="">Intake Code <span style="color: red;">*</span></label>
+  <input type="text" name="INTAKE_CODE" #INTAKE_CODE="ngModel" [(ngModel)]="service.formData.INTAKE_CODE" class="form-control" required 
+  [ngClass]="{ 'is-invalid':(INTAKE_CODE.errors && INTAKE_CODE.touched) || !checkCode(service.formData.INTAKE_ID,service.formData.INTAKE_CODE),'is-valid': !INTAKE_CODE.errors && INTAKE_CODE.touched}">
+  <span *ngIf="!checkCode(service.formData.INTAKE_ID,service.formData.INTAKE_CODE)" class="text-danger">Intake Code is exist</span>  
+
+</div>
+  <div class="form-group">
+      <label for="">Intake Name <span style="color: red;">*</span></label>
+  <input type="text" name="INTAKE_NAME" #INTAKE_NAME="ngModel" [(ngModel)]="service.formData.INTAKE_NAME" class="form-control"
+  [ngClass]="{ 'is-invalid':(INTAKE_NAME.errors && INTAKE_NAME.touched) || !checkName(service.formData.INTAKE_ID,service.formData.INTAKE_NAME),'is-valid': !INTAKE_NAME.errors && INTAKE_NAME.touched}">
+  <span *ngIf="!checkCode(service.formData.INTAKE_ID,service.formData.INTAKE_NAME)" class="text-danger">Intake Name is exist</span>    
+</div>
+  
+  <!-- <input type="hidden" name="STATUS" #STATUS="ngModel" [(ngModel)]="service.formData.STATUS"> -->
+  <div class="form-group">
+    <select class="form-control" name="STATUS" #STATUS="ngModel" [(ngModel)]="service.formData.STATUS" >
+      <option [value]="1">Display</option>
+      <option [value]="2">Banned</option>
+    </select>
+  </div>
+  <div class="form-group pull-left">
+    <button type="button" (click)="loadForm(this.service.formDataI)" class="btn btn-danger btn-block">RESET</button>
+  </div>
+  <div class="form-group pull-right">
+    <button type="button" [disabled]="form.invalid || (INTAKE_CODE.errors && INTAKE_CODE.touched) || !checkCode(service.formData.INTAKE_ID,service.formData.INTAKE_CODE) || !checkCode(service.formData.INTAKE_ID,service.formData.INTAKE_NAME) " (click)="onSubmit(form)"  data-dismiss="modal" class="btn btn-info btn-block">SUBMIT</button>
+  </div>
+</form>

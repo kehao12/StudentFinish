@@ -1,0 +1,313 @@
+<div id="body">
+        <div class="container-fluid">       
+            <div class="row">
+                
+      
+                <div class="col-lg">
+                    <div class="card">
+                        <div class="card-header"> <!--card head-->
+                            <nav class="navbar navbar-expand-sm bg-light">
+                                <div class="navbar-branch ">
+                                    <h3>SUBJECTS</h3>
+                                </div>  
+      
+                                <ul class="navbar-nav ml-auto">                          
+                                    <li class="nav-item">                                 
+                                        <!--model create-->
+                                        <button type="button" class="btn btn-primary fa fa-plus" data-toggle="modal" data-target="#create"></button>
+                                        <div class="modal" id="create">
+                                            <div class="modal-dialog modal-xl">
+                                                <div class="modal-content">                        
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">SUBJECTS Info</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+                                                
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                        <form>
+                                                            <div class="row form-inline form-group"> <!--name -- subname-->
+                                                                <label class="col-3 col-lg-3" for="name">Subject name</label>
+                                                                <input class="form-control col-9 col-lg-9" placeholder="Subject name" name="name">
+                                                            </div>
+                                                            
+                                                            <div class="row form-inline form-group"> <!--Parent -- subname parent-->
+                                                                <label class="col-3 col-lg-3" for="name">Subject parent</label>
+                                                                <form class="col-3 col-lg-9">
+                                                                    <select name="cars" class="custom-select">
+                                                                      <option selected>IsParent</option>
+                                                                      <option value="Toiec Basic">Toiec Basic</option>
+                                                                      <option value="Ielts Basic">Ielts Basic</option>                                                                     
+                                                                    </select>
+                                                                </form>
+                                                            </div>
+      
+                                                            
+                                                        </form>
+                                                </div>
+                                                
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>                                    
+                                </ul>                                                         
+                            </nav>                            
+                        </div>
+                        
+                                <!--card body-->
+                        <div class="card-body">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="bg-primary text-light">
+                                        <tr>
+                                        <th>#</th>
+                                        <th>Name</th>   <!--subname-->
+                                        <th>Parent</th>    <!--parentid-->                                               
+                                        <th></th>        <!--Activity-->                    
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>1</td>
+                                        <td>Toeic Basic</td>
+                                        <td>isParent</td>                                        
+                                        <td>         
+                                            <!--model edit-->                                   
+                                            <button type="button" class="btn btn-secondary fa fa-edit" data-toggle="modal" data-target="#edit1"></button>
+                                            <div class="modal" id="edit1">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content">                        
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">SUBJECTS Info</h4>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+                                                    
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="row form-inline form-group"> <!--edit name-->
+                                                                <label class="col-3 col-lg-3" for="name">Subject name</label>
+                                                                <input class="form-control col-9 col-lg-9" placeholder="Subject name" value="Toeic Basic" name="name">
+                                                            </div>
+                                                            
+                                                            <div class="row form-inline form-group"> <!--Parent-->
+                                                                <label class="col-3 col-lg-3" for="name">Subject parent</label>
+                                                                <form class="col-3 col-lg-9">
+                                                                    <select name="cars" class="custom-select">
+                                                                    <option selected>IsParent</option>
+                                                                    <option value="Toiec Basic">Toiec Basic</option>
+                                                                    <option value="Ielts Basic">Ielts Basic</option>                                                                     
+                                                                    </select>
+                                                                </form>
+                                                            </div>
+                                                            
+                                                        </form>
+                                                    </div>
+                                                    
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                                    </div>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-danger fa fa-times"></button>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Ielts Basic</td>
+                                            <td>isParent</td>                                            
+                                            <td>
+                                                <!--model edit-->
+                                                <button type="button" class="btn btn-secondary fa fa-edit" data-toggle="modal" data-target="#edit2"></button>
+                                                <div class="modal" id="edit2">
+                                                    <div class="modal-dialog modal-xl">
+                                                        <div class="modal-content">                        
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">SUBJECTS Info</h4>
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        </div>
+                                                        
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="row form-inline form-group"> <!--edit name-->
+                                                                    <label class="col-3 col-lg-3" for="name">Subject name</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject name" value="Ielts Basic" name="name">
+                                                                </div>
+                                                                
+                                                                <div class="row form-inline form-group"> <!--Parent-->
+                                                                    <label class="col-3 col-lg-3" for="name">Subject parent</label>
+                                                                    <form class="col-3 col-lg-9">
+                                                                        <select name="cars" class="custom-select">
+                                                                        <option selected>IsParent</option>
+                                                                        <option value="Toiec Basic">Toiec Basic</option>
+                                                                        <option value="Ielts Basic">Ielts Basic</option>                                                                     
+                                                                        </select>
+                                                                    </form>
+                                                                </div>
+      
+                                                                <div class="row form-inline form-group"> <!--Code-->
+                                                                    <label class="col-3 col-lg-3" for="code">Subject code</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject code" value="Ielts" name="code">
+                                                                </div>
+                                                                
+                                                                <div class="row form-inline form-group"> <!--Key-->
+                                                                    <label class="col-3 col-lg-3" for="key">Subject key</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject key not duplicate" value="PEngIelts" name="key">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-danger fa fa-times"></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Toeic 450</td>
+                                            <td>Toeic Basic</td>                                        
+                                            <td>
+                                                <!--model edit-->
+                                                <button type="button" class="btn btn-secondary fa fa-edit" data-toggle="modal" data-target="#edit3"></button>
+                                                <div class="modal" id="edit3">
+                                                    <div class="modal-dialog modal-xl">
+                                                        <div class="modal-content">                        
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">SUBJECTS Info</h4>
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        </div>
+                                                        
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="row form-inline form-group"> <!--edit name-->
+                                                                    <label class="col-3 col-lg-3" for="name">Subject name</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject name" value="Toeic 450" name="name">
+                                                                </div>
+                                                                
+                                                                <div class="row form-inline form-group"> <!--Parent-->
+                                                                    <label class="col-3 col-lg-3" for="name">Subject parent</label>
+                                                                    <form class="col-3 col-lg-9">
+                                                                        <select class="form-control">
+                                                                            <option>Toiec Basic</option>
+                                                                            <option>IsParent</option>
+                                                                            <option>Ielts Basic</option>                                                                     
+                                                                        </select>
+                                                                    </form>
+                                                                </div>
+      
+                                                                <div class="row form-inline form-group"> <!--Code-->
+                                                                    <label class="col-3 col-lg-3" for="code">Subject code</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject code" value="Toeic" name="code">
+                                                                </div>
+                                                                
+                                                                <div class="row form-inline form-group"> <!--Key-->
+                                                                    <label class="col-3 col-lg-3" for="key">Subject key</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject key not duplicate" value="EngToeic450" name="key">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-danger fa fa-times"></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Ielts 4.5</td>
+                                            <td>Ielts Basic</td>                                            
+                                            <td>
+                                                <!--model edit-->
+                                                <button type="button" class="btn btn-secondary fa fa-edit" data-toggle="modal" data-target="#edit4"></button>
+                                                <div class="modal" id="edit4">
+                                                    <div class="modal-dialog modal-xl">
+                                                        <div class="modal-content">                        
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">SUBJECTS Info</h4>
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        </div>
+                                                        
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="row form-inline form-group"> <!--edit name-->
+                                                                    <label class="col-3 col-lg-3" for="name">Subject name</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject name" value="Ielts 4.5" name="name">
+                                                                </div>
+                                                                
+                                                                <div class="row form-inline form-group"> <!--Parent-->
+                                                                    <label class="col-3 col-lg-3" for="name">Subject parent</label>
+                                                                    <form class="col-3 col-lg-9">
+                                                                        <select class="form-control">
+                                                                            <option>Ielts Basic</option> 
+                                                                            <option>Toiec Basic</option>
+                                                                            <option>IsParent</option>                                                                                                                                                
+                                                                        </select>
+                                                                    </form>
+                                                                </div>
+      
+                                                                <div class="row form-inline form-group"> <!--Code-->
+                                                                    <label class="col-3 col-lg-3" for="code">Subject code</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject code" value="Ielts" name="code">
+                                                                </div>
+                                                                
+                                                                <div class="row form-inline form-group"> <!--Key-->
+                                                                    <label class="col-3 col-lg-3" for="key">Subject key</label>
+                                                                    <input class="form-control col-9 col-lg-9" placeholder="Subject key not duplicate" value="EngIelts4.5" name="key">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        
+                                                        <!-- Modal footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-danger fa fa-times"></button>                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        </div> 
+                        
+                    </div>                   
+                </div>
+            </div>
+        </div>
+      
+      </div>
+    

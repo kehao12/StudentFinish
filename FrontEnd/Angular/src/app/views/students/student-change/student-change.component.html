@@ -1,0 +1,337 @@
+<form #form="ngForm"  autocomplete="off">
+    <div class="form-group row">
+              
+            <div class="col-md-6" >
+              <img src="../../../assets/img/avatars/avatar.jpg" class="img-fluid img-thumbnail" alt="" [ngClass]="{'d-none': !service.formData.IMG=='' }">
+                <img [src]="service.getSantizeUrl(service.formData.IMG)" height="248px" width="368px"   
+                style="max-height: 368px;max-width: 500px;" 
+                class="img-fluid img-thumbnail" [ngClass]="{'d-none': service.formData.IMG=='' }">
+              </div>
+            <div class="col-md-4">
+              <input #file type="file" id="real-input" accept='image/*' name="IMG" #IMG="ngModel"  
+              [(ngModel)]="service.formData.IMG" (change)="service.preview(file.files)"/>
+              <button class="browse-btn" (click)="service.chooseFile()">
+                Browse Files
+              </button>
+            <span class="file-info"></span>
+            </div>  
+           
+        </div>
+    
+  <!-- STU_ID AND CANID  -->
+      <div class="form-group row">
+        <div class="col-sm-6 row">
+            <label for="text" class="col-sm-4 col-form-label">Student ID: <span style="color: red">*</span></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="STU_ID" #STU_ID="ngModel" [(ngModel)]="service.formData.STU_ID" readonly>
+            </div>
+           
+        </div>
+        <div class="col-sm-6 row">
+            <label for="" class="col-sm-4 col-form-label">Candidate ID: <span style="color: red">*</span></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="CANDI_ID"  #CANDI_ID="ngModel" [(ngModel)]="service.formData.CANDI_ID" required
+              [ngClass]="{ 'is-invalid':(CANDI_ID.errors && CANDI_ID.touched) || !service.checkCANID1(service.formData.STU_ID,service.formData.CANDI_ID),'is-valid': !CANDI_ID.errors && CANDI_ID.touched}"
+              >
+              <span *ngIf="!service.checkCANID1(service.formData.STU_ID,service.formData.CANDI_ID)" class="text-danger">Candidate ID is exist</span>
+            </div>
+          
+        </div>
+  
+      </div>
+  
+      <!-- HCCSP_ID AND HCSSPEMID -->
+      <div class="form-group row">
+          <div class="col-sm-6 row">
+              <label for="text" class="col-sm-4 col-form-label">HCCS PID: <span style="color: red">*</span></label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" name="HCCSP_ID" #HCCSP_ID="ngModel" [(ngModel)]="service.formData.HCCSP_ID" required
+                [ngClass]="{ 'is-invalid':(HCCSP_ID.errors && HCCSP_ID.touched) || !service.checkHCCSP_ID1(service.formData.STU_ID,service.formData.HCCSP_ID),'is-valid': !HCCSP_ID.errors && HCCSP_ID.touched}">
+                <span *ngIf="!service.checkHCCSP_ID1(service.formData.STU_ID,service.formData.HCCSP_ID)" class="text-danger">HCCSP ID is exist</span>
+              
+              </div>
+              
+          </div>
+          <div class="col-sm-6 row">
+              <label for="text" class="col-sm-4 col-form-label">HCCS EMPID: <span style="color: red">*</span></label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" name="HCCS_EMPID" #HCCS_EMPID="ngModel"  [(ngModel)]="service.formData.HCCS_EMPID" required
+                [ngClass]="{ 'is-invalid':(HCCS_EMPID.errors && HCCS_EMPID.touched) || !service.checkHCCS_EMPID1(service.formData.STU_ID,service.formData.HCCS_EMPID),'is-valid': !HCCS_EMPID.errors && HCCS_EMPID.touched}">
+                <span *ngIf="!service.checkHCCS_EMPID1(service.formData.STU_ID,service.formData.HCCS_EMPID)" class="text-danger">HCCS EMPID is exist</span>
+              </div>
+             
+          </div>
+        </div>
+  
+      <div class="form-group row">
+        <label for="text" class="col-sm-2 col-form-label">BARCODE: <span style="color: red">*</span></label>
+        <input type="text" class="col-sm-9 form-control font-weight-bold" name="BARCODE" #BARCODE="ngModel" [(ngModel)]="service.formData.BARCODE" required 
+          [ngClass]="{ 'is-invalid':(BARCODE.errors && BARCODE.touched) || !service.checkBARCODE1(service.formData.STU_ID,service.formData.BARCODE),'is-valid': !BARCODE.errors && BARCODE.touched}">
+          <span *ngIf="!service.checkBARCODE1(service.formData.STU_ID,service.formData.BARCODE)" class="text-danger">BARCODE is exist</span>
+        </div>
+  
+    
+    <!-- end image student -->
+    <div class="form-group row">
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Catalog</label>
+        <div class="col-sm-8">
+          <!-- name="CATA_ID" #CATA_ID="ngModel" [(ngModel)]="Catalog.formData.CATA_ID" -->
+          <select class="form-control " name="CATA_ID" #CATA_ID="ngModel" [(ngModel)]="service.formData.CATA_ID">
+          <ng-container *ngFor="let cata of service.Catalog.list" >
+              <option *ngIf="cata.status === 1" [ngValue]="cata.id">
+                  {{cata.startYear + ' - ' + cata.endYear}}
+              </option>
+            </ng-container>
+            </select>
+        </div>
+      </div>
+      <div class="col-sm-6 row">
+          <label for="" class="col-form-label col-sm-4">Intake</label>
+          <div class="col-sm-8">
+            <select class="form-control " name="INTAKE_ID" #INTAKE_ID="ngModel"  [(ngModel)]="service.formData.INTAKE_ID">
+              <ng-container *ngFor="let intk of service.Intake.list" >
+                <option *ngIf="intk.CATA_ID == service.formData.CATA_ID && intk.STATUS == 1" [ngValue]="intk.INTAKE_ID">
+                    {{intk.INTAKE_NAME}}
+                </option>
+              </ng-container>
+              
+            </select>
+          </div>
+      </div>
+    </div>
+W
+     
+    <div class="form-group row">
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Last Name <span style="color: red">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="LAST_NAME" [(ngModel)]="service.formData.LAST_NAME" required>
+        </div>
+      </div>
+      <div class="col-sm-6 row">
+        <label for="inputPassword" class="col-sm-4 col-form-label">First Name <span style="color: red">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="FRIST_NAME" [(ngModel)]="service.formData.FRIST_NAME" required>
+        </div>
+      </div>
+    </div>
+    <!-- begin birthday -->
+    <div class="form-group row">
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Birthday: <span style="color: red">*</span></label>
+      <div class="col-sm-8">
+        <input type="date" class="form-control" name="BIRTH_DAY" #BIRTH_DAY="ngModel" [(ngModel)]="service.formData.BIRTH_DAY" required>
+        <span class="text-danger">{{parseDate() | date:'dd/MM/yyyy' }}</span>
+    </div>
+      </div>
+      <div class="col-sm-6 row">
+        <label for="inputPassword" class="col-sm-4 col-form-label">Place of service.Birth</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="PLACE_BIRTH" [(ngModel)]="service.formData.PLACE_BIRTH">
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group row">
+        <div class="col-sm-12 row">
+        <label for="" class="col-form-label col-sm-2">Contact:</label>
+        <div class="col-sm-10">
+            <select class="form-control " name="CONTACT_ID" #CONTACT_ID="ngModel"  [(ngModel)]="service.formData.CONTACT_ID">
+                <option value=null  [selected]="true">Please choose Contacter</option>
+                <ng-container  *ngFor="let con of Contact.list" >
+                    <option *ngIf="con.STU_ID == service.formData.STU_ID && con.FATHER_NAME.trim()" [ngValue]="con.CONTACT_ID" >{{con.FATHER_NAME}}</option>
+                    <option *ngIf="con.STU_ID == service.formData.STU_ID && con.MOTHER_NAME.trim()" [ngValue]="con.CONTACT_ID" >{{con.MOTHER_NAME}}</option>
+                    <option *ngIf="con.STU_ID == service.formData.STU_ID && con.SPON_NAME.trim()" [ngValue]="con.CONTACT_ID" >{{con.SPON_NAME}}</option>
+                </ng-container>
+            </select>
+        </div>
+        </div>  
+    </div>
+    
+    <!-- end birthday -->
+    <!-- Femal -->
+    <div class="form-group row">
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Gender</label>
+        <div class="col-sm-8">
+            <select id="select1" name="GENDER"  [(ngModel)]="service.formData.GENDER" class="form-control">
+                <option value="0">Male</option>
+                <option value="1">FeMale</option>
+               
+              </select>
+        </div>
+      </div>
+      <div class="col-sm-6 row">
+          <label for="" class="col-form-label col-sm-4">Student Type:</label>
+          <div class="col-sm-8">
+            <select class="form-control " name="STUTYPE_ID" [(ngModel)]="service.formData.STUTYPE_ID">
+              <ng-container  *ngFor="let type of service.TypeStudent.list" >
+              <option *ngIf="type.STATUS ==1" [ngValue]="service.formData.STUTYPE_ID" >{{type.TYPE_NAME}}</option>
+                </ng-container>
+            </select>
+          </div>
+      </div>
+    </div>
+   
+    <!-- Contact Person - Phone -->
+    <div class="form-group row">
+        <div class="col-sm-6 row">
+            <label for="" class="col-form-label col-sm-4">Home Country:</label>
+            <div class="col-sm-8">
+                <select id="select1" class="form-control" name="HOME_COUNTRY" [(ngModel)]="service.formData.HOME_COUNTRY">
+                    <option value=null>Please choose City</option> 
+                  <option value="HCM">TP.HCM</option>
+                    <option value="HN">Hà Nội</option>
+                  </select>
+            </div>
+          </div>
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Phone: <span style="color: red">*</span></label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" name="PHONE" #PHONE="ngModel" pattern="(09|03|07|08|05)+([0-9]{8})" [(ngModel)]="service.formData.PHONE" required
+            [ngClass]="{ 'is-invalid':(PHONE.errors && PHONE.touched),'is-valid': !PHONE.errors && PHONE.touched}"
+            >
+            <span *ngIf="PHONE.invalid && PHONE.touched" class="text-danger">PHONE must be 10 numbers</span>
+        </div>
+      </div>
+    </div>
+    <!-- Email Address  -->
+    <div class="form-group row">
+      <div class="col-sm-12 row">
+        <label for="" class="col-form-label col-sm-2">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" pattern="^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" class="form-control" name="EMAIL" #EMAIL="ngModel" placeholder="email@gmail.com" [(ngModel)]="service.formData.EMAIL">
+          <span *ngIf="EMAIL.invalid" class="text-danger">Email is invalid</span>
+        </div>
+      </div>
+    
+    </div>
+    <!-- Program -->
+    <div class="form-group row">
+        <div class="col-sm-12 row">
+        <label for="" class="col-form-label col-sm-2">Program:</label>
+        <div class="col-sm-10">
+            <select class="form-control " name="PRO_ID" #PRO_ID="ngModel"  [(ngModel)]="service.formData.PRO_ID">
+              <option [ngValue]=null>
+                Please choose Program
+            </option>
+              <ng-container *ngFor="let pro of service.Program.list" >
+                <option *ngIf="pro.STATUS == 1" [ngValue]="pro.PRO_ID">
+                    {{pro.PRO_NAME}}
+                </option>
+              </ng-container>
+              
+            </select>
+        </div>
+        </div>  
+    </div>
+    <!-- Hobby -->
+    <div class="form-group row">
+      <div class="col-sm-12 row">
+        <label for="" class="col-form-label col-sm-2">Hobby:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control " name="HOBBY" [(ngModel)]="service.formData.HOBBY">
+        </div>
+      </div>
+    </div>
+    <!-- Permanent Address -->
+    <div class="form-group row">
+      <div class="col-sm-12 row">
+        <label class="col-sm-2 col-form-label" for="text-input">Permanent Adress <span style="color: red">*</span></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="PER_ADDRESS" [(ngModel)]="service.formData.PER_ADDRESS" required>
+          <div class="row mt-2">
+              <div class="col">
+                  <select id="select1" class="form-control" name="PER_COUNTRY" [(ngModel)]="service.formData.PER_COUNTRY">
+                    <option value=null>Please choose Nation</option>
+                    <option value="VN">Việt Nam</option>
+                    <option value="USA">Mỹ</option>
+                  </select>
+                </div>
+            <div class="col">
+              
+            
+                 
+                <div *ngIf="service.formData.PER_COUNTRY == 'VN'">
+                    <select id="select1" class="form-control" name="PER_CITY" [(ngModel)]="service.formData.PER_CITY">
+                        <option value=null>Please choose City</option>
+                      <option value="HCM">TP.HCM</option>
+                      <option value="HN">Hà Nội</option>
+                    </select>
+                </div>
+                <div *ngIf="service.formData.PER_COUNTRY == 'USA'">
+                    <select id="select1" class="form-control" name="PER_CITY" [(ngModel)]="service.formData.PER_CITY">
+                        <option value=null>Please choose City</option>
+                        <option value="NY" >New York</option>
+                        <option value="LA">Los Angeles</option>
+                    </select>
+                    </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Postal Address -->
+    <div class="form-group row">
+      <div class="col-sm-12 row">
+        <label class="col-md-2 col-form-label" for="text-input">Postal Adress <span style="color: red">*</span></label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" name="PORTAL_ADDRESS" [(ngModel)]="service.formData.PORTAL_ADDRESS" required>
+          <div class="row mt-2">
+            <div class="col">
+                <select id="select1" class="form-control" name="PROTAL_COUNTRY" [(ngModel)]="service.formData.PROTAL_COUNTRY">
+                    <option value=null>Please choose Nation</option>
+                    <option value="VN">Việt Nam</option>
+                    <option value="USA">Mỹ</option>
+                  </select>
+            </div>
+            <div class="col">
+                <div *ngIf="service.formData.PROTAL_COUNTRY == 'VN'">
+                    <select id="select1" class="form-control" name="PORTAL_CITY" [(ngModel)]="service.formData.PORTAL_CITY">
+                      <option value=null>Please choose City</option>
+                      <option value="HCM">TP.HCM</option>
+                      <option value="HN">Hà Nội</option>
+                   </select>
+                </div>
+                <div *ngIf="service.formData.PROTAL_COUNTRY == 'USA'">
+                    <select id="select1" class="form-control" name="PORTAL_CITY" [(ngModel)]="service.formData.PORTAL_CITY">
+                    <option value=null>Please choose City</option>
+                    <option value="NY" >New York</option>
+                    <option value="LA">Los Angeles</option>
+                </select>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- PERSON_ID STATUS-->
+  <div class="form-group row">
+    <div class="col-sm-12 row">
+    <label for="" class="col-form-label col-sm-2">STATUS</label>
+    <div class="col-sm-10">
+        <select name="STATUS" #STATUS="ngModel" [(ngModel)]="service.formData.STATUS" class="form-control">
+            <option value="1">DISPLAY</option>
+          <option value="0">BANNED</option>
+        </select>
+    </div>
+    </div>  
+</div>
+
+    <input type="hidden" class="form-control" name="PERSON_ID" [(ngModel)]="service.formData.PERSON_ID"> 
+
+    <div class="form-group pull-left">
+        <button type="button" (click)="service.showModal($event,service.formDataI)" class="btn btn-danger btn-block">RESET</button>
+      </div>
+    <div class="form-group pull-right">
+        <button type="button" (click)="onSubmit(form)" class="btn btn-info btn-block"
+        data-dismiss="modal" [disabled]="form.invalid 
+        || !service.checkCANID1(service.formData.STU_ID,service.formData.CANDI_ID)
+        || !service.checkHCCSP_ID1(service.formData.STU_ID,service.formData.HCCSP_ID) 
+        || !service.checkHCCS_EMPID1(service.formData.STU_ID,service.formData.HCCS_EMPID)
+        || !service.checkBARCODE1(service.formData.STU_ID,service.formData.BARCODE)" 
+        >SUBMIT</button>
+        </div>
+  </form>

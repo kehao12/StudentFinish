@@ -1,0 +1,45 @@
+<div class="table-responsive-md">
+  <table datatable [dtOptions]="dtOptions" class="table table-bordered table-hover">
+    <thead class="bg-info">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">USERNAME</th>
+        <th scope="col">LAST NAME</th>
+        <th scope="col">FIRST NAME</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">STATUS</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of service.list;index as i">
+        <td>{{i+1}}</td>
+      <td>{{user.USERNAME}}</td>
+      <td>{{user.LAST_NAME}}</td>
+      <td>{{user.FIRST_NAME}}</td>
+      <td>{{user.PHONE}}</td>
+      <td>
+          <span *ngIf="user.STATUS==1" style="color: green;"> Display </span>
+          <span *ngIf="user.STATUS==0" style="color: red;"> Banned </span>
+      </td>
+      <td class="text-center" ><button (click)="service.showModal($event,user)" class="btn btn-success" data-toggle="modal" data-target="#exampleModal0"><i class="fa fa-edit"></i></button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+  <div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <h5 class="modal-title" id="exampleModalLabel">Update USER</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <app-user-change></app-user-change>
+          </div>
+        </div>
+      </div>
+    </div>
+  

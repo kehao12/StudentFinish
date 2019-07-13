@@ -1,0 +1,51 @@
+<table class="table table-striped table-bordered table-hover">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col-auto">BRANCH</th>
+      <th scope="col">PRO_CODE</th>
+      <th scope="col">PRO_NAME</th>
+      <th scope="col">CREDITS_RE</th>
+      <th scope="col">CREDITS_ELEC</th>
+      <th scope="col">STATUS</th>
+      <th scope="col">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pro of service.list; let i = index">
+      <td>{{i + 1}}</td>
+      <td>
+        <div *ngFor="let br of service.list1">
+          <span *ngIf="pro.BRANCH_ID == br.BRANCH_ID">{{br.BRANCH_NAME}}</span>
+        </div>
+      </td>
+      <td>{{pro.PRO_CODE}}</td>
+      <td>{{pro.PRO_NAME}}</td>
+      <td>{{pro.CREDITS_RE}}</td>
+      <td>{{pro.CREDITS_ELEC}}</td>
+      <td>
+        <span *ngIf="pro.STATUS == 1; else Nu">Active</span>
+        <ng-template #Nu> <span style="color: red;">Inactive</span></ng-template>
+      </td>
+      <td class="text-center"><button (click)="service.showModal($event,ma)" class="btn btn-success" data-toggle="modal"
+          data-target="#exampleModal0"><i class="fa fa-edit"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+<!-- modal -->
+<div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <h5 class="modal-title" id="exampleModalLabel">Update Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-major-changed></app-major-changed>
+      </div>
+    </div>
+  </div>
+</div>

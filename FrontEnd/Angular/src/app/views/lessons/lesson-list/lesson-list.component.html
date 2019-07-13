@@ -1,0 +1,51 @@
+<table class="table table-striped table-bordered table-hover">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      
+      <th scope="col">Lesson Code</th>
+      <th scope="col">Lesson Name</th>
+      <th scope="col-auto">Catalog</th>
+      <th scope="col-auto">Program</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let less of service.list; index as i">
+      <td>{{i+1}}</td>
+      
+        <td>{{less.LESS_CODE}}</td>
+   
+      
+ 
+        <td>{{less.LESS_NAME}}</td>
+        
+        <ng-container *ngFor="let cata of Catalog.list" >
+       
+          <td *ngIf="cata.id == less.CATA_ID">{{cata.startYear + ' - ' + cata.endYear}}</td>
+    
+      </ng-container>
+
+      <ng-container *ngFor="let pro of Program.list" >
+          
+          <td *ngIf="less.PRO_ID == pro.PRO_ID">{{pro.PRO_NAME}}</td>
+        
+      </ng-container>
+        
+     
+      <td><span *ngIf="less.STATUS==1; else Nu;" style="color: green;">Display</span>
+        <ng-template #Nu> <span style="color: red;">Banned</span></ng-template>
+      </td>
+      <td class="text-center">
+        <button (click)="populateForm(less)" aria-hidden="true" class="btn btn-success"
+        data-toggle="modal" data-target="#exampleModal0">
+        <i class="fa fa-edit"></i>
+        </button>
+        
+       
+      </td>
+    </tr>
+ 
+  </tbody>
+</table>

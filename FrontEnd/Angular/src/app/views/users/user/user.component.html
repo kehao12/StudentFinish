@@ -1,0 +1,109 @@
+<form #form="ngForm"  autocomplete="off">
+    <div class="form-group row">
+        <div class="col-sm-12 row">
+            <label for="" class="col-form-label col-sm-2">UserName: <span style="color: red">*</span></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="USERNAME" #USERNAME="ngModel" [(ngModel)]="service.formData.USERNAME" required
+              [ngClass]="{ 'is-invalid':(USERNAME.errors && USERNAME.touched) || !service.checkCode(service.formData.USERNAME),'is-valid': !USERNAME.errors && USERNAME.touched}">
+              <span *ngIf="!service.checkCode(service.formData.USERNAME)" class="text-danger">
+                  Username is exist
+                </span>
+            </div>
+        </div>
+      
+      </div>
+    <div class="form-group row">
+        <div class="col-sm-6 row">
+          <label for="" class="col-form-label col-sm-4">PassWord</label>
+          <div class="col-sm-8">
+              <input type="password" class="form-control" name="PASSWORD"  #PASSWORD="ngModel" [(ngModel)]="service.formData.PASSWORD" required 
+              [ngClass]="{ 'is-invalid':(PASSWORD.errors && PASSWORD.touched),'is-valid': !PASSWORD.errors && PASSWORD.touched}">
+            </div>
+        </div>
+        <div class="col-sm-6 row">
+            <label for="" class="col-form-label col-sm-4">Confirm Password: <span style="color: red">*</span></label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" name="REPASSWORD" #REPASSWORD="ngModel"  [(ngModel)]="service.REPASSWORD" required
+                [ngClass]="{ 'is-invalid':(REPASSWORD.errors || service.formData.PASSWORD !== service.REPASSWORD)&& REPASSWORD.touched,'is-valid': !REPASSWORD.errors && REPASSWORD.touched}"
+                >
+                <span *ngIf="service.formData.PASSWORD != service.REPASSWORD && REPASSWORD.touched" class="text-danger">Re Password must be different with Passowrd</span>
+            </div>
+          </div>
+         
+  
+      </div>
+    <div class="form-group row">
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Last Name <span style="color: red">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="LAST_NAME" [(ngModel)]="service.formData.LAST_NAME" required>
+        </div>
+      </div>
+      <div class="col-sm-6 row">
+        <label for="inputPassword" class="col-sm-4 col-form-label">First Name <span style="color: red">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="FIRST_NAME" [(ngModel)]="service.formData.FIRST_NAME" required>
+        </div>
+      </div>
+    </div>
+    <!-- begin birthday -->
+    <div class="form-group row">
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Birthday: <span style="color: red">*</span></label>
+      <div class="col-sm-8">
+        <input type="date" class="form-control" name="BIRTH_DAY" [(ngModel)]="service.formData.BIRTH_DAY" required>
+      </div>
+      </div>
+      <div class="col-sm-6 row">
+          <label for="" class="col-form-label col-sm-4">Email:</label>
+          <div class="col-sm-8">
+            <input type="email" pattern="^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" class="form-control" name="EMAIL" #EMAIL="ngModel" placeholder="email@gmail.com" [(ngModel)]="service.formData.EMAIL">
+            <span *ngIf="EMAIL.invalid" class="text-danger">Email is invalid</span>
+          </div>
+      </div>
+    </div>
+    <!-- end birthday -->
+    <!-- Gender -->
+    <div class="form-group row">
+      <div class="col-sm-6 row">
+        <label for="" class="col-form-label col-sm-4">Gender</label>
+        <div class="col-sm-8">
+            <select id="select1" name="GENDER"  [(ngModel)]="service.formData.GENDER" class="form-control">
+                <option value="0">Male</option>
+                <option value="1">FeMale</option>
+               
+              </select>
+        </div>
+      </div>
+      <div class="col-sm-6 row">
+          <label for="" class="col-form-label col-sm-4">Phone: <span style="color: red">*</span></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" name="PHONE" #PHONE="ngModel" pattern="(09|03|07|08|05)+([0-9]{8})" [(ngModel)]="service.formData.PHONE" required
+            [ngClass]="{ 'is-invalid':(PHONE.errors && PHONE.touched),'is-valid': !PHONE.errors && PHONE.touched}"
+            >
+            <span *ngIf="PHONE.invalid && PHONE.touched" class="text-danger">PHONE must be 10 numbers</span>
+          </div>
+        </div>
+
+    </div>
+      <!-- Permanent Address -->
+      <div class="form-group row">
+          <div class="col-sm-12 row">
+            <label class="col-sm-2 col-form-label" for="text-input">Address <span style="color: red">*</span></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="ADDRESS" [(ngModel)]="service.formData.ADDRESS" required>
+            </div>
+          </div>
+        </div>
+    <!-- Email Address  -->
+  
+
+    <input type="hidden" name="STATUS"  #STATUS="ngModel" [(ngModel)]="service.formData.STATUS">
+    <div class="form-group pull-left">
+        <button type="button" (click)="service.resetForm()" class="btn btn-danger btn-block">RESET</button>
+      </div>
+    <div class="form-group pull-right">
+        <button type="button" (click)="onSubmit(form)" data-dismiss="modal"  class="btn btn-info btn-block">SUBMIT</button>
+        </div>
+  </form>
+  

@@ -1,0 +1,30 @@
+export class Student {
+STU_ID: string;
+INTAKE_ID: number;
+STUTYPE_ID: number;
+CONTACT_ID: number;
+CATA_ID: number;
+PRO_ID: number;
+HCCSP_ID: string;
+HCCS_EMPID: string;
+BARCODE: string;
+CANDI_ID: string;
+FRIST_NAME: string;
+LAST_NAME: string;
+BIRTH_DAY: Date;
+PLACE_BIRTH: string;
+HOME_COUNTRY: string;
+GENDER: number;
+PHONE: string;
+EMAIL: string;
+PERSON_ID: string;
+HOBBY: string;
+PER_ADDRESS: string;
+PER_CITY: string;
+PER_COUNTRY: string;
+PORTAL_ADDRESS: string;
+PORTAL_CITY: string;
+PROTAL_COUNTRY: string;
+IMG: string;
+STATUS: number;
+}

@@ -1,0 +1,58 @@
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <label>PROGRAM CODE</label>
+    <!-- [(ngModel)]="service.formData.PRO_CODE" -->
+    <input type="text" required name="PRO_CODE" #PRO_CODE="ngModel" [(ngModel)]="service.formData.PRO_CODE"
+      class="form-control"
+      [ngClass]="{ 'is-invalid':(PRO_CODE.errors && PRO_CODE.touched) || !checkCode(service.formData.PRO_CODE),'is-valid': !PRO_CODE.errors && PRO_CODE.touched}">
+    <span *ngIf="!checkCode(service.formData.PRO_CODE)" class="text-danger">
+      Program code is exist
+    </span>
+  </div>
+  <div class="form-group">
+    <label>PROGRAM NAME</label>
+    <input type="text" required name="PRO_NAME" #PRO_NAME="ngModel" [(ngModel)]="service.formData.PRO_NAME"
+      class="form-control"
+      [ngClass]="{ 'is-invalid':(PRO_NAME.errors && PRO_NAME.touched) || !checkCode(service.formData.PRO_NAME),'is-valid': !PRO_CODE.errors && PRO_CODE.touched}">
+    <span *ngIf="!checkProName(service.formData.PRO_NAME)" class="text-danger">
+      Program Name is exist
+    </span>
+  </div>
+
+  <div class="form-group">
+    <label>REQUIRED CREDITS</label>
+    <input name="CREDITS_RE" #CREDITS_RE="ngModel" pattern="[0-9]*"
+      [ngClass]="{ 'is-invalid' :CREDITS_RE.errors && CREDITS_RE.touched,'is-valid': !CREDITS_RE.errors && CREDITS_RE.touched}"
+      [(ngModel)]="service.formData.CREDITS_RE" class="form-control">
+    <span *ngIf="CREDITS_RE.invalid" class="text-danger">
+      Required Credits must be the numbers!
+    </span>
+
+  </div>
+  <div class="form-group">
+    <label>ElECTIVE CREDITS</label>
+    <input name="CREDITS_ELEC" #CREDITS_ELEC="ngModel" pattern="[0-9]*"
+      [ngClass]="{ 'is-invalid' :CREDITS_ELEC.errors && CREDITS_ELEC.touched,'is-valid': !CREDITS_ELEC.errors && CREDITS_ELEC.touched}"
+      [(ngModel)]="service.formData.CREDITS_ELEC" class="form-control">
+    <span *ngIf="CREDITS_ELEC.invalid" class="text-danger">
+      Elective Credits must be the numbers!
+    </span>
+  </div>
+  <div class="form-group">
+    <label>BRANCH</label>
+    <select name="BRANCH_ID" #BRANCH_ID="ngModel" [(ngModel)]="service.formData.BRANCH_ID" class="form-control">
+      <option *ngFor="let branch of service.list1" [ngValue]="branch.BRANCH_ID">
+        {{branch.BRANCH_NAME}}
+      </option>
+    </select>
+  </div>
+  <input type="hidden" name="STATUS"  [(ngModel)]="service.formData.STATUS">
+  <!-- <input type="hidden" name="STATUS"  [(ngModel)]="service.formData.STATUS"> -->
+  <div class="form-group pull-left">
+    <button type="button" (click)="resetForm()" class="btn btn-danger btn-block">RESET</button>
+  </div>
+  <div class="form-group pull-right">
+    <button type="button" [disabled]="form.invalid || !checkCode(service.formData.PRO_CODE)" (click)="onSubmit(form)"
+      data-dismiss="modal" class="btn btn-info btn-block">SUBMIT</button>
+  </div>
+</form>

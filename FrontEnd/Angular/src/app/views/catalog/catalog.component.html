@@ -1,0 +1,202 @@
+<section>
+    <div class="">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="row justify-content-between">
+                <div class="col-6">
+                  <h3>List Catalogs</h3>
+                </div>
+                <div class="col-6 text-right">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
+                    <i class="fa fa-plus" aria-hidden="true"> </i>
+                    &nbsp; Add
+                  </button>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive-md">
+                <table datatable [dtOptions]="dtOptions" class="table table-bordered table-hover">
+                <thead class="bg-info">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Start Year</th>
+                    <th scope="col">End Year</th>
+                    <th scope="col">Note</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+  
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                  <tr *ngFor="let catalog of listCatalog, let i = index">
+                    <td>{{i+1}}</td>
+                    <td>
+                      {{catalog.YEAR_START}}
+                    </td>
+                    <td>
+                      {{catalog.YEAR_END}}
+                    </td>
+                    <td>
+                      {{catalog.NOTE}}
+                    </td>
+                    <td *ngIf="catalog.STATUS == 0">
+                        Inactive
+                    </td>
+                    <td *ngIf="catalog.STATUS == 1">
+                      Active
+                    </td>
+                   
+                    <td>
+                      <button class="btn btn-success" aria-hidden="true"
+                      data-toggle="modal" data-target="#update" (click)="getACatalog(catalog.CATA_ID)"><i class="fa fa-edit"></i></button>&nbsp;
+                     </td>
+                    </tr>
+                   
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- begin modal create -->
+  <div class="modal fade" id="create" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            
+            <h4 class="modal-title text-white">Add New Catalog</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <form [formGroup] = "formAddCatalog">
+                  <div class="form-group row">
+                    <label for="" class="col-sm-3 col-form-label text-dark font-weight-bold">Start Year</label>
+                    <div class="col-sm-9" >
+                      <select class="custom-select" (change) = "checkStartYear()" formControlName="startYear" [ngClass]="{'is-invalid': valStartYear}"> 
+                        <option value="0"></option>     
+                        <option *ngFor="let year of listYears" value={{year.YEAR_ID}}>{{year.YEAR1}}</option>         
+                      </select>
+                      <div class="invalid-feedback" *ngIf="valStartYear">
+                        Start Year must more than End Year
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-3 col-form-label text-dark font-weight-bold">End Year</label>
+                    <div class="col-sm-9" >
+                        <select class="custom-select" formControlName="endYear" (change) = "checkEndYear()" [ngClass]="{'is-invalid': valEndYear}">
+                            <option value="0"></option>        
+                          <option *ngFor="let year of listYears" value={{year.YEAR_ID}}>{{year.YEAR1}}</option>         
+                        </select>
+                        <div class="invalid-feedback" *ngIf="valEndYear">
+                            End Year must more than Start Year
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label text-dark font-weight-bold">Note</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Fall 2019, Spring 2019, Summer 2019" name="note" formControlName="note">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-3 col-form-label text-dark font-weight-bold" >Status</label>
+                    <div class="col-sm-9">
+                      <select class="custom-select" formControlName="status" [(ngModel)]="statusSelectedDefault" disabled>
+                        <option value=1>Active</option>
+                        <option value=0>Inactive</option>
+                      </select>
+                    </div>
+                </div>
+                  
+                </form>
+          </div>
+          <div class="modal-footer"> 
+            <button type="button" class="btn btn-danger" (click)="resetForm(formAddCatalog)">Reset</button>
+            
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="addCatalog()" [disabled] = "submitNull == true">Submit</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
+  <!-- end modal create -->
+  <!-- begin modal update -->
+  <div class="modal fade" id="update" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            
+            <h4 class="modal-title text-white">Update Catalog</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <form [formGroup] = "formEditCatalog">
+                  <div class="form-group row">
+                      <label for="" class="col-sm-3 col-form-label text-dark font-weight-bold">Start Year</label>
+                      <div class="col-sm-9" >
+                          <select class="custom-select" (change) = "checkSY()" formControlName="startYear" [ngClass]="{'is-invalid': valSY}">      
+                            <option *ngFor="let year of listYears" value={{year.YEAR_ID}}>{{year.YEAR1}}</option>         
+                          </select>
+                          <div class="invalid-feedback" *ngIf="valSY">
+                            Start Year must more than End Year
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-3 col-form-label text-dark font-weight-bold">End Year</label>
+                       
+                              <div class="col-sm-9" >
+                                <select class="custom-select" formControlName="endYear" (change) = "checkEY()" [ngClass]="{'is-invalid': valEY}">        
+                                  <option *ngFor="let year of listYears" value={{year.YEAR_ID}}>{{year.YEAR1}}</option>         
+                                </select>
+                                <div class="invalid-feedback" *ngIf="valEY">
+                                    End Year must more than Start Year
+                                  </div>
+                              </div>
+                          
+                      </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label text-dark font-weight-bold">Note</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Fall, Spring, Summer" name="note" formControlName="note">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label text-dark font-weight-bold">Status</label>
+                    <div class="col-sm-9">
+                      <select class="custom-select" formControlName="status" [(ngModel)]="statusSelected">
+                        <option value=1>Active</option>
+                        <option value=0>Inactive</option>
+                       
+                      </select>
+                    </div>
+                  </div>
+                </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-danger" (click)="resetForm(formEditCatalog)">Reset</button>
+           
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editCatalog()" [disabled] = "valSY == true ">Submit</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
+  <!-- end modal update -->
+  

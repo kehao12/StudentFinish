@@ -1,0 +1,60 @@
+<form #form="ngForm" autocomplete="off">
+<input type="hidden"  name="ID" #ID="ngModel" [(ngModel)]="service.formData.ID">
+    <!-- <div class="form-group">
+        <label>PROGRAM</label>
+        <select name="PRO_ID" #PRO_ID1="ngModel" [(ngModel)]="this.PRO_ID" class="form-control">
+          <ng-container *ngFor="let pro of Program.list" >
+            
+              <ng-container *ngFor="let less of Lesson.list" >
+                
+                  <option *ngIf="service.formData.LESS_NOW == less.LESS_ID && less.PRO_ID == pro.PRO_ID"  [ngValue]="pro.PRO_ID">
+                      {{pro.PRO_NAME}}
+                  </option>
+                </ng-container>
+             
+            </ng-container>
+        </select>
+      </div> -->
+    
+      <div class="row">
+          <div class="form-group col-sm-12">
+            
+            <input type="text" name="LESS_NOW" #LESS_NOW="ngModel" [(ngModel)]="service.formData.LESS_NOW" class="form-control" hidden>    
+          </div>
+ 
+
+  <div class="form-group col-sm-12">
+    <label>Prerequisite</label>
+    <select name="LESS_PRE" #LESS_PRE="ngModel" [(ngModel)]="service.formData.LESS_PRE" class="form-control">
+      <ng-container *ngFor="let less of Lesson.list;" >
+        
+          <option *ngIf="less.STATUS === 1  && 
+          less.LESS_ID != service.formData.LESS_NOW" [ngValue]="less.LESS_ID">
+              {{less.LESS_NAME}}
+          </option>
+
+        </ng-container>
+  </select>
+</div>
+  </div>
+  <div class="form-group">
+      <select class="form-control" name="STATUS" #STATUS="ngModel" [(ngModel)]="service.formData.STATUS" >
+        <option [value]="1">Display</option>
+        <option [value]="0">Banned</option>
+      </select>
+    </div>
+
+  <div class="form-group pull-left">
+    <button type="button" (click)="loadForm(this.service.formDataI)" class="btn btn-danger btn-block">RESET</button>
+  </div>
+
+  <input type="hidden"  name="STATUS" #STATUS="ngModel" [(ngModel)]="service.formData.STATUS">
+
+  <div class="form-group pull-right">
+    <button type="button" id="next" (click)="onSubmit(form)" data-dismiss="modal"
+   [disabled]="form.invalid" class="btn btn-info btn-block">SUBMIT</button>
+  </div>
+</form>
+
+<!--  || !checkCode(-1,service.formData.LESS_CODE) 
+      || !checkName(-1,service.formData.LESS_NAME) -->

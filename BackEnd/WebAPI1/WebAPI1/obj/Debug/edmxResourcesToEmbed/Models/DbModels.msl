@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLTTSVModelStoreContainer" CdmEntityContainer="DbModels">
+    <EntitySetMapping Name="BRANCHes">
+      <EntityTypeMapping TypeName="QLTTSVModel.BRANCH">
+        <MappingFragment StoreEntitySet="BRANCH">
+          <ScalarProperty Name="BRANCH_ID" ColumnName="BRANCH_ID" />
+          <ScalarProperty Name="BRANCH_NAME" ColumnName="BRANCH_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATALOGs">
+      <EntityTypeMapping TypeName="QLTTSVModel.CATALOG">
+        <MappingFragment StoreEntitySet="CATALOG">
+          <ScalarProperty Name="CATA_ID" ColumnName="CATA_ID" />
+          <ScalarProperty Name="YEAR_START_ID" ColumnName="YEAR_START_ID" />
+          <ScalarProperty Name="YEAR_END_ID" ColumnName="YEAR_END_ID" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORies">
+      <EntityTypeMapping TypeName="QLTTSVModel.CATEGORY">
+        <MappingFragment StoreEntitySet="CATEGORY">
+          <ScalarProperty Name="CATE_ID" ColumnName="CATE_ID" />
+          <ScalarProperty Name="INTYPE_ID" ColumnName="INTYPE_ID" />
+          <ScalarProperty Name="NAME_EN" ColumnName="NAME_EN" />
+          <ScalarProperty Name="NAME_VI" ColumnName="NAME_VI" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="SQUENCE_NUM" ColumnName="SQUENCE_NUM" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTs">
+      <EntityTypeMapping TypeName="QLTTSVModel.CONTACT">
+        <MappingFragment StoreEntitySet="CONTACT">
+          <ScalarProperty Name="CONTACT_ID" ColumnName="CONTACT_ID" />
+          <ScalarProperty Name="STU_ID" ColumnName="STU_ID" />
+          <ScalarProperty Name="CELL_PHONE" ColumnName="CELL_PHONE" />
+          <ScalarProperty Name="HOME_PHONE" ColumnName="HOME_PHONE" />
+          <ScalarProperty Name="PHONE_MESS" ColumnName="PHONE_MESS" />
+          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+          <ScalarProperty Name="FATHER_PHONE" ColumnName="FATHER_PHONE" />
+          <ScalarProperty Name="FATHER_MAIL" ColumnName="FATHER_MAIL" />
+          <ScalarProperty Name="FATHER_WORKING" ColumnName="FATHER_WORKING" />
+          <ScalarProperty Name="FATHER_POSISION" ColumnName="FATHER_POSISION" />
+          <ScalarProperty Name="MOTHER_NAME" ColumnName="MOTHER_NAME" />
+          <ScalarProperty Name="MOTHER_PHONE" ColumnName="MOTHER_PHONE" />
+          <ScalarProperty Name="MOTHER_WORKING" ColumnName="MOTHER_WORKING" />
+          <ScalarProperty Name="MOTHER_POSISION" ColumnName="MOTHER_POSISION" />
+          <ScalarProperty Name="MOTHER_MAIL" ColumnName="MOTHER_MAIL" />
+          <ScalarProperty Name="SPON_NAME" ColumnName="SPON_NAME" />
+          <ScalarProperty Name="SPON_PHONE" ColumnName="SPON_PHONE" />
+          <ScalarProperty Name="SPON_MAIL" ColumnName="SPON_MAIL" />
+          <ScalarProperty Name="SPON_WORKING" ColumnName="SPON_WORKING" />
+          <ScalarProperty Name="SPON_POSISION" ColumnName="SPON_POSISION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENTs">
+      <EntityTypeMapping TypeName="QLTTSVModel.DOCUMENT">
+        <MappingFragment StoreEntitySet="DOCUMENT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="STU_ID" ColumnName="STU_ID" />
+          <ScalarProperty Name="CATE_ID" ColumnName="CATE_ID" />
+          <ScalarProperty Name="CHECKBOX" ColumnName="CHECKBOX" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="TEXT" ColumnName="TEXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INPUT_TYPE">
+      <EntityTypeMapping TypeName="QLTTSVModel.INPUT_TYPE">
+        <MappingFragment StoreEntitySet="INPUT_TYPE">
+          <ScalarProperty Name="INTYPE_ID" ColumnName="INTYPE_ID" />
+          <ScalarProperty Name="TYPE_NAME" ColumnName="TYPE_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INTAKEs">
+      <EntityTypeMapping TypeName="QLTTSVModel.INTAKE">
+        <MappingFragment StoreEntitySet="INTAKE">
+          <ScalarProperty Name="INTAKE_ID" ColumnName="INTAKE_ID" />
+          <ScalarProperty Name="CATA_ID" ColumnName="CATA_ID" />
+          <ScalarProperty Name="INTAKE_CODE" ColumnName="INTAKE_CODE" />
+          <ScalarProperty Name="INTAKE_NAME" ColumnName="INTAKE_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LESS_CONDITION">
+      <EntityTypeMapping TypeName="QLTTSVModel.LESS_CONDITION">
+        <MappingFragment StoreEntitySet="LESS_CONDITION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LESS_NOW" ColumnName="LESS_NOW" />
+          <ScalarProperty Name="LESS_PRE" ColumnName="LESS_PRE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LESSONs">
+      <EntityTypeMapping TypeName="QLTTSVModel.LESSON">
+        <MappingFragment StoreEntitySet="LESSON">
+          <ScalarProperty Name="LESS_ID" ColumnName="LESS_ID" />
+          <ScalarProperty Name="LESS_CODE" ColumnName="LESS_CODE" />
+          <ScalarProperty Name="LESS_NAME" ColumnName="LESS_NAME" />
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="CATA_ID" ColumnName="CATA_ID" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROGRAMS">
+      <EntityTypeMapping TypeName="QLTTSVModel.PROGRAM">
+        <MappingFragment StoreEntitySet="PROGRAMS">
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="BRANCH_ID" ColumnName="BRANCH_ID" />
+          <ScalarProperty Name="PRO_CODE" ColumnName="PRO_CODE" />
+          <ScalarProperty Name="PRO_NAME" ColumnName="PRO_NAME" />
+          <ScalarProperty Name="CREDITS_RE" ColumnName="CREDITS_RE" />
+          <ScalarProperty Name="CREDITS_ELEC" ColumnName="CREDITS_ELEC" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEMESTERs">
+      <EntityTypeMapping TypeName="QLTTSVModel.SEMESTER">
+        <MappingFragment StoreEntitySet="SEMESTER">
+          <ScalarProperty Name="SEM_ID" ColumnName="SEM_ID" />
+          <ScalarProperty Name="SEM_NAME" ColumnName="SEM_NAME" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENTs">
+      <EntityTypeMapping TypeName="QLTTSVModel.STUDENT">
+        <MappingFragment StoreEntitySet="STUDENT">
+          <ScalarProperty Name="STU_ID" ColumnName="STU_ID" />
+          <ScalarProperty Name="INTAKE_ID" ColumnName="INTAKE_ID" />
+          <ScalarProperty Name="STUTYPE_ID" ColumnName="STUTYPE_ID" />
+          <ScalarProperty Name="CONTACT_ID" ColumnName="CONTACT_ID" />
+          <ScalarProperty Name="CATA_ID" ColumnName="CATA_ID" />
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="HCCSP_ID" ColumnName="HCCSP_ID" />
+          <ScalarProperty Name="HCCS_EMPID" ColumnName="HCCS_EMPID" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+          <ScalarProperty Name="CANDI_ID" ColumnName="CANDI_ID" />
+          <ScalarProperty Name="FRIST_NAME" ColumnName="FRIST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="BIRTH_DAY" ColumnName="BIRTH_DAY" />
+          <ScalarProperty Name="PLACE_BIRTH" ColumnName="PLACE_BIRTH" />
+          <ScalarProperty Name="HOME_COUNTRY" ColumnName="HOME_COUNTRY" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
+          <ScalarProperty Name="HOBBY" ColumnName="HOBBY" />
+          <ScalarProperty Name="PER_ADDRESS" ColumnName="PER_ADDRESS" />
+          <ScalarProperty Name="PER_CITY" ColumnName="PER_CITY" />
+          <ScalarProperty Name="PER_COUNTRY" ColumnName="PER_COUNTRY" />
+          <ScalarProperty Name="PORTAL_ADDRESS" ColumnName="PORTAL_ADDRESS" />
+          <ScalarProperty Name="PORTAL_CITY" ColumnName="PORTAL_CITY" />
+          <ScalarProperty Name="PROTAL_COUNTRY" ColumnName="PROTAL_COUNTRY" />
+          <ScalarProperty Name="IMG" ColumnName="IMG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLTTSVModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TYPE_STUDENT">
+      <EntityTypeMapping TypeName="QLTTSVModel.TYPE_STUDENT">
+        <MappingFragment StoreEntitySet="TYPE_STUDENT">
+          <ScalarProperty Name="STUTYPE_ID" ColumnName="STUTYPE_ID" />
+          <ScalarProperty Name="TYPE_NAME" ColumnName="TYPE_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERs">
+      <EntityTypeMapping TypeName="QLTTSVModel.USER">
+        <MappingFragment StoreEntitySet="USER">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="BIRTH_DAY" ColumnName="BIRTH_DAY" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YEARs">
+      <EntityTypeMapping TypeName="QLTTSVModel.YEAR">
+        <MappingFragment StoreEntitySet="YEAR">
+          <ScalarProperty Name="YEAR_ID" ColumnName="YEAR_ID" />
+          <ScalarProperty Name="YEAR1" ColumnName="YEAR" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YEAR_SEME">
+      <EntityTypeMapping TypeName="QLTTSVModel.YEAR_SEME">
+        <MappingFragment StoreEntitySet="YEAR_SEME">
+          <ScalarProperty Name="YEAR_ID" ColumnName="YEAR_ID" />
+          <ScalarProperty Name="SEM_ID" ColumnName="SEM_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

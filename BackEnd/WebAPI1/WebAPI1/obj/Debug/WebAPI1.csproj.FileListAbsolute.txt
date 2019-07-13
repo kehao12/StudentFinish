@@ -1,0 +1,477 @@
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\WebAPI1.dll.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\WebAPI1.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\WebAPI1.pdb
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Claims.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Cors.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\WebGrease.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CopyComplete
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Saigon\student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.pdb
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.pdb
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\WebAPI1.dll.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\WebAPI1.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\WebAPI1.pdb
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Claims.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Cors.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\WebGrease.dll
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\ISC Quang Trung\SaigonTech\Student_SG\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CopyComplete
+D:\Student\WebAPI1\WebAPI1\bin\WebAPI1.dll.config
+D:\Student\WebAPI1\WebAPI1\bin\WebAPI1.dll
+D:\Student\WebAPI1\WebAPI1\bin\WebAPI1.pdb
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\csc.exe
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\csc.exe.config
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\csc.rsp
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\csi.exe
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\csi.exe.config
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\csi.rsp
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.AppContext.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Collections.Immutable.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Console.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Compression.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.AccessControl.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Claims.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.ValueTuple.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\vbc.exe
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\vbc.exe.config
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\vbc.rsp
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe
+D:\Student\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe.config
+D:\Student\WebAPI1\WebAPI1\bin\Antlr3.Runtime.dll
+D:\Student\WebAPI1\WebAPI1\bin\EntityFramework.dll
+D:\Student\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.dll
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Web.Infrastructure.dll
+D:\Student\WebAPI1\WebAPI1\bin\Newtonsoft.Json.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Cors.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Helpers.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Http.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Mvc.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Optimization.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Razor.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.dll
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.dll
+D:\Student\WebAPI1\WebAPI1\bin\WebGrease.dll
+D:\Student\WebAPI1\WebAPI1\bin\EntityFramework.xml
+D:\Student\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.xml
+D:\Student\WebAPI1\WebAPI1\bin\Newtonsoft.Json.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Helpers.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Http.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Mvc.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Optimization.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.Razor.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.xml
+D:\Student\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.xml
+D:\Student\WebAPI1\WebAPI1\bin\Antlr3.Runtime.pdb
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csprojAssemblyReference.cache
+D:\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CoreCompileInputs.cache
+D:\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CopyComplete
+D:\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.dll
+D:\Student\WebAPI1\WebAPI1\obj\Debug\WebAPI1.pdb
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.dll
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.dll
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Student\WebAPI1\WebAPI1\bin\Owin.dll
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.xml
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.xml
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Cors.dll
+D:\Student\WebAPI1\WebAPI1\bin\Microsoft.Owin.Cors.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\WebAPI1.dll.config
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\WebAPI1.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\WebAPI1.pdb
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\csc.exe
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\csc.exe.config
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\csc.rsp
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\csi.exe
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\csi.exe.config
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\csi.rsp
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.AppContext.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Collections.Immutable.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Console.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.IO.Compression.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Security.AccessControl.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Security.Claims.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.ValueTuple.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\vbc.exe
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\vbc.exe.config
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\vbc.rsp
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe.config
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Antlr3.Runtime.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\EntityFramework.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Cors.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Web.Infrastructure.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Newtonsoft.Json.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Owin.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Cors.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Helpers.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Http.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Mvc.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Optimization.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Razor.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.WebPages.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\WebGrease.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\EntityFramework.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Cors.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Newtonsoft.Json.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Helpers.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Http.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Mvc.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Optimization.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.Razor.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.WebPages.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Antlr3.Runtime.pdb
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csprojAssemblyReference.cache
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CoreCompileInputs.cache
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CopyComplete
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\obj\Debug\WebAPI1.dll
+D:\Documents\ThucTap-2019\OJ\Hoai2\QLSVISC\WebAPI1\WebAPI1\obj\Debug\WebAPI1.pdb
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\WebAPI1.dll.config
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\WebAPI1.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\WebAPI1.pdb
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Security.Claims.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Cors.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Owin.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Cors.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\WebGrease.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Cors.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Http.Cors.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\obj\Debug\WebAPI1.csproj.CopyComplete
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\obj\Debug\WebAPI1.dll
+C:\Users\Admin\Desktop\WebAPI1\WebAPI1\obj\Debug\WebAPI1.pdb
